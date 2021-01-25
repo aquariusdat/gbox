@@ -1,0 +1,53 @@
+nav {
+  margin-top: 20px;
+  width: 100%;
+}
+
+nav .navbar__wrapper {
+  width: 100%;
+}
+
+nav .navbar__wrapper .container {
+  width: 100%;
+}
+
+nav .navbar__wrapper .container .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .navbar__wrapper .container .navbar .middle__navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav .navbar__wrapper .container .line {
+  margin-top: 8px;
+  height: 1px;
+  width: 100%;
+  background-color: black;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.navbar__item a {
+  font-size: 15px;
+  line-height: 30px;
+  font-family: 'mypro';
+  text-decoration: none;
+  color: black;
+  padding: 15px;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=nav.css.map */
