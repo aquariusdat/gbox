@@ -179,6 +179,13 @@ body main .main__wrapper .container .allwork .downarrow .img img {
   width: 15px;
 }
 
+body main .main__wrapper .container .line {
+  height: 1px;
+  width: 100%;
+  background-color: black;
+  margin: 20px 0;
+}
+
 .box {
   width: 32%;
 }

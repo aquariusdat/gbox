@@ -157,6 +157,13 @@ body{
                        }
                    }
                }
+
+               .line{
+                   height: 1px;
+                   width: 100%;
+                   background-color: black;
+                   margin:20px 0;
+               }
            }
        } 
     }
