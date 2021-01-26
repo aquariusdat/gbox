@@ -29,6 +29,10 @@ nav .navbar__wrapper .container .navbar .middle__navbar {
   display: flex;
 }
 
+nav .navbar__wrapper .container .navbar .middle__navbar .navbar__item a {
+  padding: 15px 30px;
+}
+
 nav .navbar__wrapper .container .line {
   margin-top: 8px;
   height: 1px;
@@ -42,12 +46,34 @@ nav .navbar__wrapper .container .line {
 }
 
 .navbar__item a {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 30px;
   font-family: 'mypro';
   text-decoration: none;
   color: black;
-  padding: 15px;
+  padding: 15px 10px;
   text-transform: uppercase;
+  position: relative;
+}
+
+.navbar__item a::after {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  content: '';
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 2px;
+  background-color: black;
+  width: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.navbar__item a:hover::after {
+  width: 80%;
 }
 /*# sourceMappingURL=nav.css.map */

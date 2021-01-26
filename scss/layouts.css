@@ -119,9 +119,15 @@ body main .main__wrapper .container .selecttab .selector a {
   font-size: 16px;
   line-height: 30px;
   color: #898989;
+  -webkit-transition: 0.65s;
+  transition: 0.65s;
 }
 
 body main .main__wrapper .container .selecttab .selector a.active {
+  color: black;
+}
+
+body main .main__wrapper .container .selecttab .selector a:hover {
   color: black;
 }
 
@@ -173,10 +179,13 @@ body main .main__wrapper .container .allwork .downarrow {
 
 body main .main__wrapper .container .allwork .downarrow .img {
   width: 100%;
+  cursor: pointer;
 }
 
 body main .main__wrapper .container .allwork .downarrow .img img {
   width: 15px;
+  -webkit-animation: animScrolldown 1.5s infinite;
+          animation: animScrolldown 1.5s infinite;
 }
 
 body main .main__wrapper .container .line {
@@ -188,21 +197,55 @@ body main .main__wrapper .container .line {
 
 .box {
   width: 32%;
+  cursor: pointer;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.box:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.box:hover .logo .img img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.box:hover .text .title p {
+  color: #ffde00;
+}
+
+.box:hover .text .text__line {
+  background-color: white;
+}
+
+.box:hover .text .textbox {
+  color: #ffde00;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 .box .logo {
   width: 100%;
+  height: 190px;
 }
 
 .box .logo .img {
   width: 100%;
+  height: 100%;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .box .logo .img img {
-  width: 100%;
+  background-attachment: fixed;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  height: 100%;
 }
 
 .box .text {
@@ -217,6 +260,7 @@ body main .main__wrapper .container .line {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-bottom: 15px;
 }
 
 .box .text .title {
@@ -227,13 +271,21 @@ body main .main__wrapper .container .line {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 70%;
 }
 
 .box .text .title p {
+  width: 100%;
   font-family: 'pronoreg';
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 .box .text .text__line {
@@ -241,11 +293,15 @@ body main .main__wrapper .container .line {
   width: 16px;
   height: 3px;
   background-color: #ffde00;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 .box .text .textbox {
   font-family: 'pronoreg';
   font-size: 16px;
   line-height: 25px;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 /*# sourceMappingURL=layouts.css.map */

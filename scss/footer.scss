@@ -1,1 +1,170 @@
+.info__item{
+    display:flex;
+    flex-direction: column;
+    &.tel{
+        padding-top: 30px;
+    }
+    &.flexrow{
+        display:flex;
+        flex-direction: row;
+    }
+    p{
+        padding:0 20px;
+        font-size: 16px;
+        font-family: 'pronoreg';
+        line-height: 35px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+}
+.flexcol{
+    display:flex;
+    flex-direction: column;
+}
+.flexrow{
+    display:flex;
+    flex-direction: row;
+}
+.col__item{
+    padding:0 20px;
+    .item__wrap{
+        overflow: hidden;
+    }
+    p{
+        margin:30px 0 10px 0;
+        position: relative;
+        text-transform: uppercase;
+        &::after{
+            position: absolute;
+            display: block;
+            content:'';
+            width: 100%;
+            height: 2px;
+            background-color: red;
+            // left:-100%;
+            bottom:-229%;
+            transition: .7s;
+            transform: translateX(-100%);
+        }
+        
+        &.focus{
+            &::after{
+                // left:0%;
+                transform: translateX(0%);
+            }
+        }
+    }
+    input{
+        margin:5px 0;
+        background-color: transparent;
+        border:none;
+        border-bottom: 2px solid black;
+        width: 220px;
+        outline:none;
+        font-size: 15px;
+        font-family: 'pronoreg';
+    }
+    &.flexend{
+        display:flex;
+        justify-content: flex-end;
+    }
+    a{
+        margin-top:50px;
+        background-color: black;
+        padding:5px 0;
+        span{
+            padding:0 10px;
+            color:white;
+            font-size: 14px;
+            font-family: 'pronoreg';
+            font-weight: bold;
+        }
+        
+    }
+}
+footer{
+    margin-top:40px;
+    width: 100%;
+    .footer__wrapper{
+        width: 100%;
+        &.yellow{
+                background-color: #ffde00;
+                padding:40px 0 80px 0;
+        }
+        .container{
+            width: 100%;
+            .footer__content{
+                padding-bottom:20px;
+                width: 100%;
+                display:flex;
+                    width: 100%;
+                    .submit{
+                        width: 100%;
+                        display:flex;
+                        .left{
+                            width: 50%;
+                            .info__item{
+                                p{
+                                    
+                                }
+                            }
+                        }
+                        .right{
+                            width: 50%;
+                            display:flex;
+                            .col__left{
+                                
+                            }
+                            .col__right{
+
+                            }
+                        }
+                    }
+                    .scrolltop{
+                        margin-top:50px;
+                        width: 100%;
+                        display:flex;
+                        flex-direction: column;
+                        align-items: center;
+                        .img{
+                            width: 20px;
+                            height:30px;
+                            
+                            cursor: pointer;
+                            img{
+                                width: 25px;
+                                animation: animScrolltop 1.5s infinite;
+                            }
+                        }
+                        p{
+                            margin-top:20px;
+                            font-size: 12px;
+                            font-family: 'pronoreg';
+                            line-height: 30px;
+                            letter-spacing: 0.1em;
+                        }
+                    }
+                
+                .left{
+                    width: 50%;
+                    .info__item{
+                        p{
+    
+                        }
+                    }
+                }
+                .right{
+                    width: 50%;
+                    .info__item{
+                        p{
+    
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 

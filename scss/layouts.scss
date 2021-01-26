@@ -109,12 +109,16 @@ body{
                            &.active{
                                color:black;
                            }
+                           &:hover{
+                               color:black;
+                           }
                         text-decoration: none;
                         margin:10px;
                         font-family: 'mypro';
                         font-size: 16px;
                         line-height: 30px;
                         color:#898989;
+                        transition: 0.65s;
                        }
                    }
                    .content{
@@ -149,10 +153,14 @@ body{
                    .downarrow{
                        width: 15px;
                        margin:15px 0;
+                       
                        .img{
                            width: 100%;
+                           cursor: pointer;
                            img{
+                               
                                width: 15px;
+                               animation: animScrolldown 1.5s infinite;
                            }
                        }
                    }
@@ -171,15 +179,50 @@ body{
 
 .box{
     width: 32%;
+    cursor: pointer;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    &:hover{
+        background:rgba(0,0,0,0.9);
+        
+        
+        .logo{
+            .img{
+                img{
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .text{
+            .title{
+                p{
+                    color:#ffde00;
+                }
+            }
+            .text__line{
+                background-color: white;
+            }
+            .textbox{
+                color:#ffde00;
+                transition: 0.6s;
+            }
+        }
+    }
+    transition: 0.6s;
     .logo{
         width: 100%;
+        height: 190px;
         .img{
             width: 100%;
+            height: 100%;
             cursor: pointer;
+            overflow: hidden;
+            
             img{
-                width: 100%;
+                background-attachment: fixed;
                 object-fit: cover;
-                
+                transition: 0.7s;
+                height: 100%;
             }
         }
     }
@@ -188,16 +231,24 @@ body{
         width: 100%;
         flex-direction: column;
         align-items: center;
+        padding-bottom: 15px;
+        
         .title{
             margin-top:35px;
             display:flex;
             justify-content: center;
+            width: 70%;
             p{
+                width: 100%;
                 font-family: 'pronoreg';
                 font-weight: bold;
                 font-size: 17px;
                 line-height: 30px;
-            
+                text-align: center;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                transition: 0.6s;
             }
         }
         .text__line{
@@ -205,11 +256,14 @@ body{
             width: 16px;
             height: 3px;
             background-color: #ffde00;
+            transition: 0.6s;
         }
         .textbox{
             font-family: 'pronoreg';
             font-size: 16px;
             line-height: 25px;
+            transition: 0.6s;
         }
     }
 }
+

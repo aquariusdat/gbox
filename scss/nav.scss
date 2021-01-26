@@ -14,6 +14,11 @@ nav{
                 }
                 .middle__navbar{
                     display:flex;
+                    .navbar__item{
+                        a{
+                            padding:15px 30px;
+                        }
+                    }
                 }
                 .right__navbar{
                     
@@ -32,13 +37,33 @@ nav{
 	box-sizing: border-box;
 }
 .navbar__item{
+    
     a{
-        font-size: 15px;
+        font-size: 16px;
         line-height: 30px;
         font-family: 'mypro';
         text-decoration: none;
         color:black;
-        padding:15px;
+        padding:15px 10px;
         text-transform: uppercase;
+        position: relative;
+        &::after{
+            display:flex;
+            content:'';
+            position: absolute;
+            top:75%;
+            left:50%;
+            transform: translateX(-50%);
+            height: 2px;
+            background-color: black;
+            width: 0;
+            transition: 0.5s;
+        }
+        &:hover{
+            &::after{
+                width: 80%;
+            }
+        }
+       
     }
 }
