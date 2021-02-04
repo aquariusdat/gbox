@@ -267,3 +267,55 @@ body{
     }
 }
 
+
+
+@include mobile{
+    body{
+        main{
+            .main__wrapper{
+                .container{
+                    max-width: 100vw;
+                    padding:0;
+                    .line{
+                        display:none;
+                    }
+                    .selecttab{
+                        .selector{
+                            display:none;
+                        }
+                        .content{
+                            .content__row{
+                                display:flex;
+                                flex-direction: column;
+                                
+                                    margin:0;
+                                
+                                .box{
+                                    width: 100%;
+                                    margin-bottom:20px;
+                                    .logo{
+                                        .img{
+                                            img{
+                                                width: 100%;
+                                            }
+                                        }
+                                    }
+                                    .text{
+                                        padding-bottom: 50px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .welcome{
+                        p{
+                            &.info{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

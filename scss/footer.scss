@@ -185,6 +185,10 @@ footer{
                 .left{
                     width: 50%;
                     .info__item{
+                        &:last-child
+                        {
+                            display:none;
+                        }
                         p{
     
                         }
@@ -203,6 +207,42 @@ footer{
     }
 }
 
-
+@include mobile{
+    footer{
+        border-top: 1px solid black;
+        .footer__wrapper{
+            .container{
+                padding-top:20px;
+                .footer__content{
+                    .submit{
+                        .left{
+                            display:none;
+                        }
+                        .right{
+                            display:none;
+                        }
+                    }
+                    .left{
+                        width: 100%;
+                        .info__item{
+                            width: 100%;
+                            display:flex;
+                            justify-content: center;
+                            p{
+                                text-align: center;
+                            }
+                            &:last-child{
+                                display:block;
+                            }
+                        }
+                    }
+                    .right{
+                        display:none;
+                    }
+                }
+            }
+        }
+    }
+}
 
 

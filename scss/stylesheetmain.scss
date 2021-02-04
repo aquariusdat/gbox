@@ -1,0 +1,13 @@
+/* Core variables and mixins*/
+@import "reset";
+@import "variables";
+@import "mixins";
+@import "layouts";
+@import "bootstrap_mini";
+
+/* Navigation, header, footer*/
+@import "header";
+@import "nav";
+@import "footer";
+
+/* Pages*/

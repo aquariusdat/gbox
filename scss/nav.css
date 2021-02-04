@@ -76,4 +76,10 @@ nav .navbar__wrapper .container .line {
 .navbar__item a:hover::after {
   width: 80%;
 }
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  nav {
+    display: none;
+  }
+}
 /*# sourceMappingURL=nav.css.map */

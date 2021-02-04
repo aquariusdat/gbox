@@ -4,22 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GBOX</title>
-    <link rel="stylesheet" href="/scss/reset.css">
+    
     <link rel="stylesheet" href="/font/stylesheet.css">
-    <link rel="stylesheet" href="/scss/bootstrap_mini.css">
-    <link rel="stylesheet" href="/scss/mixins.css">
-    <link rel="stylesheet" href="/scss/header.css">
-    <link rel="stylesheet" href="/scss/nav.css">
-    <link rel="stylesheet" href="/scss/layouts.css">
-    <link rel="stylesheet" href="/scss/footer.css">
+    <link rel="stylesheet" href="/scss/stylesheetmain.css">
+    <script src="/js/main.js"></script>
 </head>
 <body>
     <div class="wrapper">
+        <div class="menures close">
+            <div class="btn__close">
+                <div class="img">
+                    <img src="/images/close.svg" alt="">
+                </div>
+            </div>
+            <div class="menubar__wrapper">
+                <div class="menubar__item">
+                    <a href="#">ABOUT</a>
+                </div>
+                <div class="menubar__item">
+                    <a href="#">STUDIO</a>
+                </div>
+                <div class="menubar__item">
+                    <a href="#">RENTAL</a>
+                </div>
+                <div class="menubar__item">
+                    <a href="#">CAFE</a>
+                </div>
+                <div class="menubar__item">
+                    <a href="#">WORK</a>
+                </div>
+                <div class="menubar__item">
+                    <a href="#">CONTACT</a>
+                </div>
+            </div>
+        </div>
         <header id="top">
             <div class="header__wrapper">
                 <div class="container">
                     <div class="menubar">
-
+                        <div class="img">
+                            <img src="/images/menu.svg" alt="">
+                        </div>
                     </div>
                     <div class="logo">
                         <div class="img">
@@ -238,6 +263,11 @@
                                 <p>TEL</p>
                                 <p>+84 979 872 809</p>
                             </div>
+                            <div class="info__item">
+                                <p>ADDRESS</p>
+                                <p>04 BAU CAT DISTRICT TAN BINH</p>
+                                <p>HO CHI MINH CITY.</p>
+                            </div>
                         </div>
                         <div class="right">
                             <div class="info__item">
@@ -319,5 +349,44 @@
     </div>
     <script src="/js/jquery-3.5.1.min.js"></script>
     <script src="/js/main.js"></script>
+    <script>
+        var menubarrespon = document.querySelector('.header__wrapper .container .menubar');
+        var menures = document.querySelector('body .wrapper .menures');
+        var btnclosemenures = document.querySelector('body .wrapper .menures .btn__close');
+        
+        menubarrespon.addEventListener('click',function(){
+            if(document.querySelector('body .wrapper .menures .btn__close .img').classList.contains('click'))
+            {
+                document.querySelector('body .wrapper .menures .btn__close .img').classList.remove('click');
+            }
+            if(menures.classList.contains('open'))
+            {
+                menures.classList.remove('open')
+                menures.classList.add('close')
+            }
+            else if(menures.classList.contains('close'))
+            {
+                menures.classList.remove('close')
+                menures.classList.add('open')
+            }
+        });
+        btnclosemenures.addEventListener('click',function(){
+            if(document.querySelector('body .wrapper .menures .btn__close .img').classList.contains('click'))
+            {
+                document.querySelector('body .wrapper .menures .btn__close .img').classList.remove('click');
+            }
+            document.querySelector('body .wrapper .menures .btn__close .img').classList.add('click');
+            if(menures.classList.contains('open'))
+            {
+                menures.classList.remove('open')
+                menures.classList.add('close')
+            }
+            else if(menures.classList.contains('close'))
+            {
+                menures.classList.remove('close')
+                menures.classList.add('open')
+            }
+        });
+    </script>
 </body>
 </html>
