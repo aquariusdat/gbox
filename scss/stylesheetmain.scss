@@ -2,12 +2,13 @@
 @import "reset";
 @import "variables";
 @import "mixins";
-@import "layouts";
+
 @import "bootstrap_mini";
 
 /* Navigation, header, footer*/
 @import "header";
 @import "nav";
 @import "footer";
-
+@import "layouts";
+@import "detail";
 /* Pages*/

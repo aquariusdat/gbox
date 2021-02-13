@@ -1,0 +1,243 @@
+main{
+    width: 100%;
+    .maindetail__wrapper{
+        width: 100%;
+        .container{
+            width: 100%;
+            .title__detail{
+                width: 100%;
+                display:flex;
+                justify-content: space-between;
+                padding:40px 0;
+                .detail__name{
+                    font-family: 'pronoreg';
+                    font-size: 16px;
+                    cursor: pointer;
+                    line-height: 22px;
+                    letter-spacing: 0.2em;
+                }
+                .detail__selection{
+                    display: flex;
+                    p{
+                        margin-right: 20px;
+                    }
+                    .img{
+                        img{
+                            width: 20px;
+                        }
+                    }
+                    .selection__items{
+                       font-family: 'pronoreg';
+                       font-size: 16px;
+                       line-height: 22px;
+                       
+                    }
+                    .fullscreen{
+                        display: flex;
+                        cursor: pointer;
+                        margin-right:110px;
+                        &:hover{
+                            .img{
+                                img{
+                                    transform:scale(1.4);
+                                }
+                            }
+                        }
+                        .img{
+                            img{
+                                transition: .5s cubic-bezier(.5,.39,0,.98);
+                            }
+                        }
+                    }
+                    .backtoall{
+                        display: flex;
+                        cursor: pointer;
+                        position: relative;
+                        margin-right:35px;
+                        align-items: center;
+                        p{
+                            margin-right:10px;
+                        }
+                        &:hover{
+                            .img{
+                                .imgBack1{
+                                    animation: unset;
+                                    transform: translate(-230%,-50%) scale(0);
+                                    opacity: 0;
+                                    
+                                }
+                                .imgBack2{
+                                    transform: translate(-50%,-50%) scale(1);
+                                    opacity: 1;
+                                    
+                                }
+                            }
+                        }
+                        .img{
+                            position: absolute;
+                            width: 40px;
+                            height: 20px;
+                            right:-58%;
+                            display:flex;
+                            align-items: center;
+                            overflow: hidden;
+                            
+                            .imgBack1{
+                                position: absolute;
+                                position: absolute;
+                                top:50%;
+                                left:50%;
+                                transform: translate(-50%,-50%) scale(1);
+                                // animation: animBackToAll 1.5s infinite;
+                                transition: .5s cubic-bezier(.95,.22,.03,.79);
+                                
+                            }
+                            .imgBack2{
+                                position: absolute;
+                                top:50%;
+                                left:50%;
+                                transform: translate(100%,-50%) scale(0);
+                                opacity: 0;
+                                transition: .5s cubic-bezier(.95,.22,.03,.79);
+                                
+                                
+                            }
+                        }
+                    }
+                }
+            }
+
+            .project__image{
+                width: 100%;
+                .img{
+                    width: 100%;
+                    cursor: pointer;
+                    img{
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .project__info{
+                padding-top:40px;
+                padding-bottom:80px;
+                display:flex;
+                justify-content: space-between;
+                .title{
+                    text-transform: uppercase;
+                    font-family: 'pronoreg';
+                    font-size: 16px;
+                    margin-bottom:20px;
+                    letter-spacing: 0.2em;
+                }
+                p{
+                    font-family: 'Arial';
+                    font-size: 13px;    
+                    line-height: 26px;
+                }
+                .description{
+                    flex:2;
+                    display:flex;
+                    flex-direction: column;
+                    p{
+                        width: 320px;
+                    }
+                    
+                }
+                .client{
+                    flex:1;
+                    display:flex;
+                    flex-direction: column;
+                    
+                }
+                .aboutteam{
+                    flex:1;
+                    display:flex;
+                    flex-direction: column;
+                    
+                }
+            }
+            .line{
+                width: 100%;
+                height: 1px;
+                background-color: black;
+            }
+        }
+    }
+}
+
+@mixin mobile {
+	@media screen and (min-width: 320px) and (max-width: 768px) {
+		@content;
+	}
+}
+@include mobile{
+    main{
+        .maindetail__wrapper{
+            .container{
+                max-width: 100vw;
+                padding:0;
+                .line{
+                    display:none;
+                }
+                .title__detail{
+                    .detail__name{
+                        margin-left:10px;
+                    }
+                    .detail__selection{
+                        .fullscreen{
+                            display:none;
+                        }
+                        .backtoall{
+                            p{
+                                margin-right:20px;
+                            }
+                            &:hover{
+                                .img{
+                                    .imgBack1{
+                                        transform: translate(-50%,-50%);
+                                    }
+                                    .imgBack2{
+                                        transform: translate(-50%,-50%);
+                                    }
+                                }
+                            }
+                            .img{
+                                width: 30px;
+                                right:-30%;
+                                
+                                .imgBack1{
+                                    transform: translate(-50%,-50%);
+                                    animation: animBackToAll 1s infinite;
+                                }
+                                .imgBack2{
+                                    transform: translate(-50%,-50%);
+                                    animation: animBackToAll 1s infinite;
+                                }
+                            }
+                        }
+                    }
+                }
+                .project__image{
+                    
+                }
+                .project__info{
+                    display:flex;
+                    flex-direction: column;
+                    margin:0 10px;
+                    padding-bottom:20px;
+                    .description{
+
+                    }
+                    .client{
+
+                    }
+                    .aboutteam{
+
+                    }
+                }
+            }
+        }
+    }
+}
