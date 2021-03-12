@@ -46,9 +46,9 @@ nav .navbar__wrapper .container .line {
 }
 
 .navbar__item a {
-  font-size: 16px;
+  font-size: 12px;
   line-height: 30px;
-  font-family: 'mypro';
+  font-family: 'pronosemibold';
   text-decoration: none;
   color: black;
   padding: 15px 10px;

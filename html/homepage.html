@@ -22,7 +22,7 @@
                     <a href="#">ABOUT</a>
                 </div>
                 <div class="menubar__item">
-                    <a href="#">STUDIO</a>
+                    <a href="./studio.html">STUDIO</a>
                 </div>
                 <div class="menubar__item">
                     <a href="#">RENTAL</a>
@@ -70,7 +70,7 @@
                         </div>
                         <div class="middle__navbar">
                             <div class="navbar__item">
-                                <a href="#">Studio</a>
+                                <a href="./studio.html">STUDIO</a>
                                 <a href="#">Rental</a>
                                 <a href="#">Cafe</a>
                                 <a href="#">Work</a>
@@ -96,7 +96,7 @@
                         <h2 class="text__welcome">Welcome</h2>
                         <h2 class="text__welcome">To</h2>
                         <p class="text__welcome yellow">GBOX studios</p>
-                        <p class="text__welcome info">GBOX STUDIOS aim is to create a full service offering clients the highest quality of work with a comprehensive understanding of modern production, our services include advertising, products, automotive, portraits, beauty, editorial photography and video production. Gbox brand mark was inspired by the brand name and the lens – a visual representation of our world, we aim to create powerful simplicity, all components are coherence based on a box. Gbox is based in Ho Chi Minh City, one of the most beautiful city in Vietnam.</p>
+                        <p class="text__welcome info"><b>GBOX STUDIOS</b> aim is to create a full service offering clients the highest quality of work with a comprehensive understanding of modern production, our services include advertising, products, automotive, portraits, beauty, editorial photography and video production. Gbox brand mark was inspired by the brand name and the lens – a visual representation of our world, we aim to create powerful simplicity, all components are coherence based on a box. Gbox is based in Ho Chi Minh City, one of the most beautiful city in Vietnam.</p>
                     </div>
 
                     <div class="line"></div>
@@ -107,7 +107,7 @@
                             <a href="#">FILM</a>
                             <a href="#">IMAGE</a>
                         </div>
-
+                        
                         <div class="content">
                             <div class="content__row">
                                 <div class="box">
@@ -122,10 +122,10 @@
                                         </div>
                                         <div class="text__line"></div>
                                         <p class="textbox">
-                                            Clients: Cif
+                                            Clients: <span class="italic">Cif</span>
                                         </p>
                                         <p class="textbox">
-                                            Photographer: Eric Huynh
+                                            Photographer: <span class="italic">Eric Huynh</span>
                                         </p>
                                     </div>
                                 </div>
@@ -141,13 +141,13 @@
                                         </div>
                                         <div class="text__line"></div>
                                         <p class="textbox">
-                                            Clients: Cif
+                                            Clients: <span class="italic">Cif</span>
                                         </p>
                                         <p class="textbox">
-                                            Photographer: Eric Huynh
+                                            Photographer: <span class="italic">Eric Huynh</span>
                                         </p>
                                         <p class="textbox">
-                                            Dictorect: Peter Zech
+                                            Dictorect: <span class="italic">Peter Zech</span>
                                         </p>
                                     </div>
                                 </div>
@@ -163,15 +163,13 @@
                                         </div>
                                         <div class="text__line"></div>
                                         <p class="textbox">
-                                            Clients: Cif
+                                            Clients: <span class="italic">Cif</span>
                                         </p>
                                         <p class="textbox">
-                                            Photographer: Eric Huynh
+                                            Photographer: <span class="italic">Eric Huynh</span>
                                         </p>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="content__row">
                                 <div class="box">
                                     <div class="logo">
                                         <div class="img">
@@ -184,10 +182,10 @@
                                         </div>
                                         <div class="text__line"></div>
                                         <p class="textbox">
-                                            Clients: Cif
+                                            Clients: <span class="italic">Cif</span>
                                         </p>
                                         <p class="textbox">
-                                            Photographer: Eric Huynh
+                                            Photographer: <span class="itatlic">Eric Huynh</span>
                                         </p>
                                     </div>
                                 </div>
@@ -203,13 +201,13 @@
                                         </div>
                                         <div class="text__line"></div>
                                         <p class="textbox">
-                                            Clients: Cif
+                                            Clients: <span class="italic">Cif</span>
                                         </p>
                                         <p class="textbox">
-                                            Photographer: Eric Huynh
+                                            Photographer: <span class="italic">Eric Huynh</span>
                                         </p>
                                         <p class="textbox">
-                                            Dictorect: Peter Zech
+                                            Dictorect: <span class="italic">Peter Zech</span>
                                         </p>
                                     </div>
                                 </div>
@@ -225,14 +223,15 @@
                                         </div>
                                         <div class="text__line"></div>
                                         <p class="textbox">
-                                            Clients: Cif
+                                            Clients: <span class="italic">Cif</span>
                                         </p>
                                         <p class="textbox">
-                                            Photographer: Eric Huynh
+                                            Photographer: <span class="italic">Eric Huynh</span>
                                         </p>
                                     </div>
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
 
@@ -350,6 +349,13 @@
     <script src="/js/jquery-3.5.1.min.js"></script>
     <script src="/js/main.js"></script>
     <script>
+        var box = document.querySelectorAll('.main__wrapper .container .selecttab .content .content__row .box');
+        box.forEach((item) => {
+            item.addEventListener('click',() => {
+                document.location.replace('./detail.html');
+            });
+        });
+
         var menubarrespon = document.querySelector('.header__wrapper .container .menubar');
         var menures = document.querySelector('body .wrapper .menures');
         var btnclosemenures = document.querySelector('body .wrapper .menures .btn__close');

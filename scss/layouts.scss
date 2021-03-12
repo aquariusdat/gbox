@@ -58,10 +58,10 @@ body{
                    flex-direction: column;
                    align-items: center;
                    h2{
-                       font-family: 'mypro';
-                       font-size: 16px;
+                       font-family: 'pronolight';
+                       font-size: 14px;
                        
-                       line-height: 27px;
+                       line-height: 22px;
                        letter-spacing: 0.2em;
                        text-transform: uppercase;
                    }
@@ -70,7 +70,7 @@ body{
                         &.yellow{
                             margin-top:30px;
                             background-color: #ffde00;
-                            font-family: 'pronoreg';
+                            font-family: 'pronobold';
                             font-size: 20px;
                             line-height: 30px;
                             letter-spacing: 0.3em;
@@ -80,11 +80,14 @@ body{
                             
                         }
                         &.info{
+                            b{
+                                font-weight: bold;
+                            }
                             margin-top:30px;
                             font-size: 12px;
                             line-height: 22px;
                             font-family: 'Arial';
-                            font-weight: bold;
+                            
                             text-align: center;
                             width: 765px;
                         }
@@ -126,15 +129,17 @@ body{
                        width: 100%;
                        .content__row{
                            width: 100%;
-                           display:flex;
-                           justify-content: space-around;
+                           display:grid;
+                           grid-template-columns: repeat(3,315px);
+                           column-gap: 20px;
+                           row-gap:50px;
                            margin:35px 0;
                            &:nth-child(1)
                            {
                                margin-top:10px;
                            }
                            .box{
-
+                            
                            }
                        }
                    }
@@ -177,12 +182,15 @@ body{
        } 
     }
 }
-
+.italic{
+    font-style: italic;
+}
 .box{
-    width: 32%;
+    width: 100%;
     cursor: pointer;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
+   
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
     &:hover{
         background:rgba(0,0,0,0.9);
         
@@ -198,6 +206,7 @@ body{
             .title{
                 p{
                     color:#ffde00;
+                    
                 }
             }
             .text__line{
@@ -239,11 +248,11 @@ body{
             display:flex;
             justify-content: center;
             width: 70%;
+            text-transform: uppercase;
             p{
                 width: 100%;
-                font-family: 'pronoreg';
-                font-weight: bold;
-                font-size: 17px;
+                font-family: 'pronobold';
+                font-size: 12px;
                 line-height: 30px;
                 text-align: center;
                 text-overflow: ellipsis;
@@ -260,9 +269,9 @@ body{
             transition: 0.6s;
         }
         .textbox{
-            font-family: 'pronoreg';
-            font-size: 16px;
-            line-height: 25px;
+            font-family: 'pronosemibold';
+            font-size: 12px;
+            line-height: 20px;
             transition: 0.6s;
         }
     }
