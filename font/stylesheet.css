@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Proxima Nova Alt Th';
-    src: url('./font/fonts/ProximaNovaA-Thin.woff2') format('woff2'),
-        url('./font/fonts/ProximaNovaA-Thin.woff') format('woff');
+    src: url('./fonts/ProximaNovaA-Thin.woff2') format('woff2'),
+        url('./fonts/ProximaNovaA-Thin.woff') format('woff');
     font-weight: 100;
     font-style: normal;
     font-display: fallback;
@@ -9,40 +9,40 @@
 
 @font-face {
     font-family: 'Proxima Nova Alt Rg';
-    src: url('./font/fonts/ProximaNovaA-Bold.woff2') format('woff2'),
-        url('./font/fonts/ProximaNovaA-Bold.woff') format('woff');
+    src: url('./fonts/ProximaNovaA-Bold.woff2') format('woff2'),
+        url('./fonts/ProximaNovaA-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: fallback;
 }
 @font-face {
     font-family: 'pronolight';
-    src: url('./font/fonts/ProximaNova-Light.woff2') format('woff2'),
-        url('./font/fonts/ProximaNova-Light.woff') format('woff');
+    src: url('./fonts/ProximaNova-Light.woff2') format('woff2'),
+        url('./fonts/ProximaNova-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: fallback;
 }
 @font-face {
     font-family: 'Proxima Nova Alt Lt';
-    src: url('./font/fonts/ProximaNovaA-Light.woff2') format('woff2'),
-        url('./font/fonts/ProximaNovaA-Light.woff') format('woff');
+    src: url('./fonts/ProximaNovaA-Light.woff2') format('woff2'),
+        url('./fonts/ProximaNovaA-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: fallback;
 }
 @font-face {
     font-family: 'pronobold';
-    src: url('./font/fonts/ProximaNova-Bold.woff2') format('woff2'),
-        url('./font/fonts/ProximaNova-Bold.woff') format('woff');
+    src: url('./fonts/ProximaNova-Bold.woff2') format('woff2'),
+        url('./fonts/ProximaNova-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'pronoreg2';
-    src: url('./font/fonts/ProximaNova-Regular.woff2') format('woff2'),
-        url('./font/fonts/ProximaNova-Regular.woff') format('woff');
+    src: url('./fonts/ProximaNova-Regular.woff2') format('woff2'),
+        url('./fonts/ProximaNova-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: fallback;
@@ -77,8 +77,8 @@
 
 @font-face {
     font-family: 'myprobold';
-    src: url('./font/fonts/MyriadPro-Bold.woff2') format('woff2'),
-        url('./font/fonts/MyriadPro-Bold.woff') format('woff');
+    src: url('./fonts/MyriadPro-Bold.woff2') format('woff2'),
+        url('./fonts/MyriadPro-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: fallback;
@@ -86,24 +86,24 @@
 
 @font-face {
     font-family: 'mypro';
-    src: url('./font/fonts/MyriadPro-BlackSemiCn.woff2') format('woff2'),
-        url('./font/fonts/MyriadPro-BlackSemiCn.woff') format('woff');
+    src: url('./fonts/MyriadPro-BlackSemiCn.woff2') format('woff2'),
+        url('./fonts/MyriadPro-BlackSemiCn.woff') format('woff');
     font-weight: 900;
     font-style: normal;
     font-display: fallback;
 }
 @font-face {
     font-family: 'dinbold';
-    src: url('./font/fonts/D-DINCondensed-Bold.woff2') format('woff2'),
-        url('./font/fonts/D-DINCondensed-Bold.woff') format('woff');
+    src: url('./fonts/D-DINCondensed-Bold.woff2') format('woff2'),
+        url('./fonts/D-DINCondensed-Bold.woff') format('woff');
     font-weight: 900;
     font-style: normal;
     font-display: fallback;
 }
 @font-face {
     font-family: 'pronosemibold';
-    src: url('./font/fonts/ProximaNova-Semibold.woff2') format('woff2'),
-        url('./font/fonts/ProximaNova-Semibold.woff') format('woff');
+    src: url('./fonts/ProximaNova-Semibold.woff2') format('woff2'),
+        url('./fonts/ProximaNova-Semibold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
     font-display: fallback;
