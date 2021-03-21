@@ -346,82 +346,87 @@
                 var contentStudios = gsap.utils.toArray('.box__wrapper .box_studio .content__box .des__content');
 
                 boxs.forEach((box) => {
-
-                    gsap.to(box.children[0].children[1], {
-                        y: '430px',
+                    var tl = gsap.timeline({
                         scrollTrigger: {
                             trigger: box,
                             start: '100px center',
                             end: 'bottom center',
                             toggleActions: 'play reverse play reverse',
-                            markers: true,
-
-                        }
-                    });
-                    gsap.to(box.children[1].children[1], {
-                        backgroundColor: '#525355', color: '#eaeaea',
-                        scrollTrigger: {
-                            trigger: box,
-                            start: '100px center',
-                            end: 'bottom center',
-                            toggleActions: 'play reverse play reverse',
-                            markers: true,
 
                         }
                     });
 
-                    gsap.to(box.children[1].children[1].children[1].children[1].children[0].children[0], {
-                        y: '0%',
-                        scrollTrigger: {
-                            trigger: box,
-                            start: '100px center',
-                            end: 'bottom center',
-                            toggleActions: 'play reverse play reverse',
-                            markers: true,
+                    tl
+                        .to(box.children[0].children[1],
+                            {
+                                y: '430px', duration: 0.4
+                            }
+                        )
+                        .to(box.children[1].children[1],
+                            {
+                                backgroundColor: '#525355', color: '#eaeaea', duration: 0.4
+                            },
+                            '-=0.4'
+                        )
+                        .to(box.children[1].children[1].children[1].children[1].children[0].children[0],
+                            {
+                                y: '0%', duration: 0.4
+                            },
+                            '-=0.4'
+                        )
+                        .to(box.children[1].children[1].children[1].children[1].children[0].children[1],
+                            {
+                                y: '160%', duration: 0.4
+                            },
+                            '-=0.4'
+                        );
+                    // gsap.to(box.children[0].children[1], {
+                    //     y: '430px', duration: 0.4,
+                    //     scrollTrigger: {
+                    //         trigger: box,
+                    //         start: '100px center',
+                    //         end: 'bottom center',
+                    //         toggleActions: 'play reverse play reverse',
+                    //         markers: true,
 
-                        }
-                    });
-                    gsap.to(box.children[1].children[1].children[1].children[1].children[0].children[1], {
-                        y: '160%',
-                        scrollTrigger: {
-                            trigger: box,
-                            start: '100px center',
-                            end: 'bottom center',
-                            toggleActions: 'play reverse play reverse',
-                            markers: true,
+                    //     }
+                    // });
+                    // gsap.to(box.children[1].children[1], {
+                    //     backgroundColor: '#525355', color: '#eaeaea', duration: 0.4,
+                    //     scrollTrigger: {
+                    //         trigger: box,
+                    //         start: '100px center',
+                    //         end: 'bottom center',
+                    //         toggleActions: 'play reverse play reverse',
+                    //         markers: true,
 
-                        }
-                    });
+                    //     }
+                    // });
+
+                    // gsap.to(box.children[1].children[1].children[1].children[1].children[0].children[0], {
+                    //     y: '0%', duration: 0.4,
+                    //     scrollTrigger: {
+                    //         trigger: box,
+                    //         start: '100px center',
+                    //         end: 'bottom center',
+                    //         toggleActions: 'play reverse play reverse',
+                    //         markers: true,
+
+                    //     }
+                    // });
+                    // gsap.to(box.children[1].children[1].children[1].children[1].children[0].children[1], {
+                    //     y: '160%', duration: 0.4,
+                    //     scrollTrigger: {
+                    //         trigger: box,
+                    //         start: '100px center',
+                    //         end: 'bottom center',
+                    //         toggleActions: 'play reverse play reverse',
+                    //         markers: true,
+
+                    //     }
+                    // });
 
                 });
-
-                // boxStudios.forEach((studio) => {
-                //     gsap.to(studio, {
-                //         y: 430,
-                //         scrollTrigger: {
-                //             trigger: studio,
-                //             start: '50px center',
-                //             end: 'bottom center',
-                //             toggleActions: 'play reverse play reverse',
-                //             markers: true,
-
-                //         }
-                //     });
-                // });
-
-                // contentStudios.forEach((content) => {
-                //     gsap.to(content, {
-                //         backgroundColor: '#525355', color: '#eaeaea',
-                //         scrollTrigger: {
-                //             trigger: content,
-                //             start: '50px center',
-                //             end: 'bottom center',
-                //             toggleActions: 'play reverse play reverse',
-                //             markers: true,
-
-                //         }
-                //     });
-                // });
             }
 
 
