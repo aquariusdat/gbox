@@ -3602,7 +3602,7 @@ body .wrapper main .studio__wrapper .container .box__wrapper .box_studio {
   cursor: pointer;
 }
 
-body .wrapper main .studio__wrapper .container .box__wrapper .box_studio:hover .box__img::after {
+body .wrapper main .studio__wrapper .container .box__wrapper .box_studio:hover .box__img .after {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
 }
@@ -3631,7 +3631,7 @@ body .wrapper main .studio__wrapper .container .box__wrapper .box_studio .box__i
   overflow: hidden;
 }
 
-body .wrapper main .studio__wrapper .container .box__wrapper .box_studio .box__img::after {
+body .wrapper main .studio__wrapper .container .box__wrapper .box_studio .box__img .after {
   display: block;
   content: "";
   position: absolute;
@@ -3685,13 +3685,13 @@ body .wrapper main .studio__wrapper .container .box__wrapper .box_studio .conten
 }
 
 body .wrapper main .studio__wrapper .container .box__wrapper .box_studio .content__box .id__content span {
-  font-family: 'mypro';
+  font-family: "mypro";
   line-height: 20px;
   font-size: 14px;
 }
 
 body .wrapper main .studio__wrapper .container .box__wrapper .box_studio .content__box .id__content p {
-  font-family: 'dinbold';
+  font-family: "dinbold";
   font-size: 61px;
   line-height: 62px;
   letter-spacing: 0.04em;
@@ -3714,7 +3714,7 @@ body .wrapper main .studio__wrapper .container .box__wrapper .box_studio .conten
 
 body .wrapper main .studio__wrapper .container .box__wrapper .box_studio .content__box .des__content .title {
   width: 100%;
-  font-family: 'pronoreg2';
+  font-family: "pronoreg2";
   font-size: 12px;
   line-height: 35px;
 }
@@ -3724,7 +3724,7 @@ body .wrapper main .studio__wrapper .container .box__wrapper .box_studio .conten
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: 'pronoreg2';
+  font-family: "pronoreg2";
   font-size: 12px;
   line-height: 18px;
 }
@@ -3760,7 +3760,7 @@ body .wrapper main .studio__wrapper .container .box__wrapper .box_studio .conten
 
 body .wrapper main .studio__wrapper .container .box__wrapper .box_studio .content__box .des__content .details__des .title {
   text-align: center;
-  font-family: 'pronosemibold';
+  font-family: "pronosemibold";
 }
 
 body .wrapper main .studio__wrapper .container .box__wrapper .box_studio .content__box .des__content .details__des .content {
@@ -3798,6 +3798,9 @@ body .wrapper main .studio__wrapper .container .box__wrapper .box_studio .conten
   body .wrapper main .studio__wrapper .container .box__wrapper {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
+  }
+  body .wrapper main .studio__wrapper .container .box__wrapper .box_studio .content__box .des__content .info__des {
+    padding: 20px 0 20px 40px;
   }
 }
 

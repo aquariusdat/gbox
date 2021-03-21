@@ -97,6 +97,7 @@
                         <div class="box_studio">
                             <div class="box__img">
                                 <img src="./images/studio01.jpg" alt="">
+                                <div class="after"></div>
                             </div>
                             <div class="content__box">
                                 <div class="id__content">
@@ -130,6 +131,7 @@
                         <div class="box_studio">
                             <div class="box__img">
                                 <img src="./images/studio02.jpg" alt="">
+                                <div class="after"></div>
                             </div>
                             <div class="content__box">
                                 <div class="id__content">
@@ -163,6 +165,7 @@
                         <div class="box_studio">
                             <div class="box__img">
                                 <img src="./images/studio03.jpg" alt="">
+                                <div class="after"></div>
                             </div>
                             <div class="content__box">
                                 <div class="id__content">
@@ -196,6 +199,7 @@
                         <div class="box_studio">
                             <div class="box__img">
                                 <img src="./images/studio04.jpg" alt="">
+                                <div class="after"></div>
                             </div>
                             <div class="content__box">
                                 <div class="id__content">
@@ -335,6 +339,91 @@
     <script>
 
         $(document).ready(() => {
+            if (screen.width >= 320 && screen.width <= 768) {
+
+                var boxs = gsap.utils.toArray('.box__wrapper .box_studio');
+                var boxStudios = gsap.utils.toArray('.box__wrapper .box_studio .box__img .after');
+                var contentStudios = gsap.utils.toArray('.box__wrapper .box_studio .content__box .des__content');
+
+                boxs.forEach((box) => {
+
+                    gsap.to(box.children[0].children[1], {
+                        y: '430px',
+                        scrollTrigger: {
+                            trigger: box,
+                            start: '100px center',
+                            end: 'bottom center',
+                            toggleActions: 'play reverse play reverse',
+                            markers: true,
+
+                        }
+                    });
+                    gsap.to(box.children[1].children[1], {
+                        backgroundColor: '#525355', color: '#eaeaea',
+                        scrollTrigger: {
+                            trigger: box,
+                            start: '100px center',
+                            end: 'bottom center',
+                            toggleActions: 'play reverse play reverse',
+                            markers: true,
+
+                        }
+                    });
+
+                    gsap.to(box.children[1].children[1].children[1].children[1].children[0].children[0], {
+                        y: '0%',
+                        scrollTrigger: {
+                            trigger: box,
+                            start: '100px center',
+                            end: 'bottom center',
+                            toggleActions: 'play reverse play reverse',
+                            markers: true,
+
+                        }
+                    });
+                    gsap.to(box.children[1].children[1].children[1].children[1].children[0].children[1], {
+                        y: '160%',
+                        scrollTrigger: {
+                            trigger: box,
+                            start: '100px center',
+                            end: 'bottom center',
+                            toggleActions: 'play reverse play reverse',
+                            markers: true,
+
+                        }
+                    });
+
+                });
+
+                // boxStudios.forEach((studio) => {
+                //     gsap.to(studio, {
+                //         y: 430,
+                //         scrollTrigger: {
+                //             trigger: studio,
+                //             start: '50px center',
+                //             end: 'bottom center',
+                //             toggleActions: 'play reverse play reverse',
+                //             markers: true,
+
+                //         }
+                //     });
+                // });
+
+                // contentStudios.forEach((content) => {
+                //     gsap.to(content, {
+                //         backgroundColor: '#525355', color: '#eaeaea',
+                //         scrollTrigger: {
+                //             trigger: content,
+                //             start: '50px center',
+                //             end: 'bottom center',
+                //             toggleActions: 'play reverse play reverse',
+                //             markers: true,
+
+                //         }
+                //     });
+                // });
+            }
+
 
 
             var menubarrespon = document.querySelector('.header__wrapper .container .menubar');

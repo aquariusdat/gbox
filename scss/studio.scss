@@ -1,43 +1,42 @@
-body{
+body {
     width: 100%;
-    .wrapper{
+    .wrapper {
         width: 100%;
-        main{
+        main {
             width: 100%;
-            .studio__wrapper{
+            .studio__wrapper {
                 width: 100%;
-                .container{
+                .container {
                     width: 100%;
-                    .box__wrapper{
+                    .box__wrapper {
                         width: 100%;
-                        display:grid;
-                        grid-template-columns: repeat(2,1fr);
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
                         column-gap: 20px;
                         row-gap: 70px;
-                        .box_studio{
+                        .box_studio {
                             width: 100%;
                             height: 420px;
-                            display:flex;
+                            display: flex;
                             flex-direction: column;
                             cursor: pointer;
-                            &:hover{
-                                .box__img{
-                                    
-                                    &::after{
+                            &:hover {
+                                .box__img {
+                                    .after {
                                         transform: translateY(0%);
                                     }
                                 }
-                                .content__box{
-                                    .des__content{
+                                .content__box {
+                                    .des__content {
                                         background-color: #525355;
-                                        color:#eaeaea;
-                                        .details__des{
-                                            .content{
-                                                .img{
-                                                    .imgHover{
+                                        color: #eaeaea;
+                                        .details__des {
+                                            .content {
+                                                .img {
+                                                    .imgHover {
                                                         transform: translateY(0%);
                                                     }
-                                                    img{
+                                                    img {
                                                         transform: translateY(160%);
                                                     }
                                                 }
@@ -46,123 +45,118 @@ body{
                                     }
                                 }
                             }
-                            .box__img{
+                            .box__img {
                                 width: 100%;
                                 height: 300px;
-                                
-                                transition: 0.6s cubic-bezier(.51,.04,.08,.96);
+
+                                transition: 0.6s cubic-bezier(0.51, 0.04, 0.08, 0.96);
                                 position: relative;
                                 overflow: hidden;
-                                &::after{
-                                    display:block;
-                                    content:"";
+                                .after {
+                                    display: block;
+                                    content: "";
                                     position: absolute;
-                                    background-color: rgba(0,0,0,0.5);
+                                    background-color: rgba(0, 0, 0, 0.5);
                                     transform: translateY(-100%);
-                                    transition: 0.6s cubic-bezier(.51,.04,.08,.96);
+                                    transition: 0.6s cubic-bezier(0.51, 0.04, 0.08, 0.96);
                                     width: 110%;
                                     height: 110%;
-                                    
                                 }
-                                img{
+                                img {
                                     width: 100%;
                                     height: inherit;
                                     object-fit: cover;
                                 }
                             }
-                            .content__box{
+                            .content__box {
                                 width: 100%;
                                 height: 120px;
-                                display:flex;
+                                display: flex;
                                 align-items: center;
-                                flex:1;
-                                .id__content{
+                                flex: 1;
+                                .id__content {
                                     background-color: #ffde00;
-                                    display:flex;
+                                    display: flex;
                                     flex-direction: column;
                                     width: 120px;
                                     height: 100%;
                                     justify-content: center;
                                     align-items: center;
-                                    span{
-                                        font-family: 'mypro';
+                                    span {
+                                        font-family: "mypro";
                                         line-height: 20px;
                                         font-size: 14px;
                                     }
-                                    p{
-                                        font-family: 'dinbold';
+                                    p {
+                                        font-family: "dinbold";
                                         font-size: 61px;
                                         line-height: 62px;
                                         letter-spacing: 0.04em;
                                     }
                                 }
-                                .des__content{
-                                    
-                                    display:flex;
-                                    flex:1;
+                                .des__content {
+                                    display: flex;
+                                    flex: 1;
                                     height: 100%;
                                     justify-content: center;
-                                    transition: 0.6s cubic-bezier(.51,.04,.08,.96);
-                                
-                                    .title{
+                                    transition: 0.6s cubic-bezier(0.51, 0.04, 0.08, 0.96);
+
+                                    .title {
                                         width: 100%;
-                                        
-                                        font-family: 'pronoreg2';
+
+                                        font-family: "pronoreg2";
                                         font-size: 12px;
                                         line-height: 35px;
-
                                     }
-                                    .content{
+                                    .content {
                                         width: 100%;
-                                        display:flex;
-                                        font-family: 'pronoreg2';
+                                        display: flex;
+                                        font-family: "pronoreg2";
                                         font-size: 12px;
                                         line-height: 18px;
                                     }
-                                    .info__des{
+                                    .info__des {
                                         width: 70.8333333%;
                                         height: 100%;
-                                        display:flex;
+                                        display: flex;
                                         flex-direction: column;
-                                                                              
+
                                         padding: 20px 0 20px 80px;
                                     }
-                                    .details__des{
+                                    .details__des {
                                         width: 29.1666667%;
-                                        display:flex;
+                                        display: flex;
                                         flex-direction: column;
                                         align-items: center;
-                                        height: 100%; 
-                                        padding: 20px 0;      
-                                        .title{
+                                        height: 100%;
+                                        padding: 20px 0;
+                                        .title {
                                             text-align: center;
-                                            font-family: 'pronosemibold';
-                                        }                                 
-                                        .content{
-                                            display:flex;
+                                            font-family: "pronosemibold";
+                                        }
+                                        .content {
+                                            display: flex;
                                             justify-content: center;
-                                            
-                                            .img{
+
+                                            .img {
                                                 position: relative;
                                                 overflow: hidden;
-                                                .imgHover{
-                                                    
+                                                .imgHover {
                                                     position: absolute;
-                                                    transition: .6s cubic-bezier(.51,.04,.08,.96);
+                                                    transition: 0.6s cubic-bezier(0.51, 0.04, 0.08, 0.96);
                                                     transform: translateY(-100%);
-                                                    background: url('/images/arrowDownYellow.svg');
+                                                    background: url("/images/arrowDownYellow.svg");
                                                     width: 15px;
                                                     height: 15px;
                                                 }
-                                                img{
+                                                img {
                                                     width: 15px;
-                                                    transition: .6s cubic-bezier(.51,.04,.08,.96);
+                                                    transition: 0.6s cubic-bezier(0.51, 0.04, 0.08, 0.96);
                                                 }
                                             }
                                         }
                                     }
                                 }
-                                
                             }
                         }
                     }
@@ -173,26 +167,32 @@ body{
 }
 
 @mixin mobile {
-	@media screen and (min-width: 320px) and (max-width: 768px) {
-		@content;
-	}
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+        @content;
+    }
 }
 
-
-@include mobile{
-    body{
-        .wrapper{
-            main{
-                .studio__wrapper{
-                    .container{
-                        .box__wrapper{
-                            grid-template-columns: repeat(1,1fr);
+@include mobile {
+    body {
+        .wrapper {
+            main {
+                .studio__wrapper {
+                    .container {
+                        .box__wrapper {
+                            grid-template-columns: repeat(1, 1fr);
+                            .box_studio {
+                                .content__box {
+                                    .des__content {
+                                        .info__des {
+                                            padding: 20px 0 20px 40px;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
             }
         }
     }
-    
-
 }
