@@ -262,6 +262,23 @@
     <script src="js/main.js"></script>
     <script>
 
+        $(document).ready(function () {
+            var tl = gsap.timeline(
+                {
+                    scrollTrigger: {
+                        trigger: '.project__info',
+                        start: 'center bottom',
+                        end: 'bottom center'
+                    }
+                }
+            )
+
+            tl.from('.description', { x: -100, opacity: 0, duration: 1 })
+                .from('.client', { y: 100, opacity: 0, duration: 1 }, '-=1')
+                .from('.aboutteam', { x: 100, opacity: 0, duration: 1 }, '-=1')
+
+        });
+
         var fullscreen = document.querySelector('main .maindetail__wrapper .container .title__detail .detail__selection .fullscreen');
 
         var modal = document.querySelector('.modal');
