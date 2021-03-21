@@ -8,12 +8,13 @@
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
-  font-family: 'Proxima Nova';
+  font-family: "Proxima Nova";
   scroll-behavior: smooth;
 }
 
 body {
   width: 100%;
+  background-color: #f4f4f4;
 }
 
 body main {
@@ -57,9 +58,9 @@ body main .main__wrapper .container .welcome {
 }
 
 body main .main__wrapper .container .welcome h2 {
-  font-family: 'mypro';
-  font-size: 16px;
-  line-height: 27px;
+  font-family: "pronolight";
+  font-size: 14px;
+  line-height: 22px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
@@ -71,7 +72,7 @@ body main .main__wrapper .container .welcome p {
 body main .main__wrapper .container .welcome p.yellow {
   margin-top: 30px;
   background-color: #ffde00;
-  font-family: 'pronoreg';
+  font-family: "pronobold";
   font-size: 20px;
   line-height: 30px;
   letter-spacing: 0.3em;
@@ -84,10 +85,13 @@ body main .main__wrapper .container .welcome p.info {
   margin-top: 30px;
   font-size: 12px;
   line-height: 22px;
-  font-family: 'Arial';
-  font-weight: bold;
+  font-family: "Arial";
   text-align: center;
   width: 765px;
+}
+
+body main .main__wrapper .container .welcome p.info b {
+  font-weight: bold;
 }
 
 body main .main__wrapper .container .line {
@@ -115,7 +119,7 @@ body main .main__wrapper .container .selecttab .selector {
 body main .main__wrapper .container .selecttab .selector a {
   text-decoration: none;
   margin: 10px;
-  font-family: 'mypro';
+  font-family: "mypro";
   font-size: 16px;
   line-height: 30px;
   color: #898989;
@@ -137,11 +141,13 @@ body main .main__wrapper .container .selecttab .content {
 
 body main .main__wrapper .container .selecttab .content .content__row {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (315px)[3];
+      grid-template-columns: repeat(3, 315px);
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 50px;
   margin: 35px 0;
 }
 
@@ -167,7 +173,7 @@ body main .main__wrapper .container .allwork {
 }
 
 body main .main__wrapper .container .allwork p {
-  font-family: 'mypro';
+  font-family: "mypro";
   line-height: 30px;
   font-size: 16px;
 }
@@ -195,17 +201,19 @@ body main .main__wrapper .container .line {
   margin: 20px 0;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .box {
-  width: 32%;
+  width: 100%;
   cursor: pointer;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
   -webkit-transition: 0.6s;
   transition: 0.6s;
 }
 
 .box:hover {
-  background: rgba(0, 0, 0, 0.9);
+  background: #525355;
 }
 
 .box:hover .logo .img img {
@@ -272,13 +280,13 @@ body main .main__wrapper .container .line {
       -ms-flex-pack: center;
           justify-content: center;
   width: 70%;
+  text-transform: uppercase;
 }
 
 .box .text .title p {
   width: 100%;
-  font-family: 'pronoreg';
-  font-weight: bold;
-  font-size: 17px;
+  font-family: "pronobold";
+  font-size: 12px;
   line-height: 30px;
   text-align: center;
   text-overflow: ellipsis;
@@ -298,9 +306,9 @@ body main .main__wrapper .container .line {
 }
 
 .box .text .textbox {
-  font-family: 'pronoreg';
-  font-size: 16px;
-  line-height: 25px;
+  font-family: "pronosemibold";
+  font-size: 12px;
+  line-height: 20px;
   -webkit-transition: 0.6s;
   transition: 0.6s;
 }
@@ -324,9 +332,14 @@ body main .main__wrapper .container .line {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin: 0;
   }
   body main .main__wrapper .container .selecttab .content .content__row .box {
     width: 100%;
+    margin-bottom: 20px;
+  }
+  body main .main__wrapper .container .selecttab .content .content__row .box:hover {
+    background-color: unset;
   }
   body main .main__wrapper .container .selecttab .content .content__row .box .logo .img img {
     width: 100%;

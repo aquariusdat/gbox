@@ -268,7 +268,11 @@ body {
         }
     }
 }
-
+@mixin mobile {
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+        @content;
+    }
+}
 @include mobile {
     body {
         main {
@@ -293,6 +297,9 @@ body {
                                 .box {
                                     width: 100%;
                                     margin-bottom: 20px;
+                                    &:hover {
+                                        background-color: unset;
+                                    }
                                     .logo {
                                         .img {
                                             img {
