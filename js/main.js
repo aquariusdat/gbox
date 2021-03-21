@@ -1,3 +1,15 @@
+let tl = gsap.timeline(
+    {
+        scrollTrigger: {
+            trigger: '.footer__content',
+            start: 'center bottom',
+            end: 'bottom center',
+        }
+    }
+)
+
+tl.from(".leftinfo", { x: -200, opacity: 0, duration: 1 }).from(".rightinfo", { x: 200, opacity: 0, duration: 1 }, "-=1")
+
 $(document).ready(function () {
     TweenMax.staggerFrom(
         $('.welcome .text__welcome'),
