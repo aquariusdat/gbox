@@ -299,6 +299,27 @@ body {
                                     margin-bottom: 20px;
                                     &:hover {
                                         background-color: unset;
+                                        .logo {
+                                            .img {
+                                                img {
+                                                    transform: scale(1);
+                                                }
+                                            }
+                                        }
+                                        .text {
+                                            .title {
+                                                p {
+                                                    color: unset;
+                                                }
+                                            }
+                                            .text__line {
+                                                background-color: unset;
+                                            }
+                                            .textbox {
+                                                color: unset;
+                                                transition: 0.6s;
+                                            }
+                                        }
                                     }
                                     .logo {
                                         .img {

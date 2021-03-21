@@ -28,6 +28,25 @@ $(document).ready(function () {
         { x: 200, opacity: 0, ease: "elastic.out(1,0.3)" },
         0.5
     );
+
+    if (screen.width >= 320 && screen.width <= 768) {
+        var sections = gsap.utils.toArray('.content .content__row .box');
+
+        sections.forEach((section) => {
+            gsap.from(section,
+
+                {
+                    scale: 0.3, opacity: 0, duration: 0.4,
+                    scrollTrigger: {
+                        trigger: section,
+                        markers: true,
+                        start: 'center bottom',
+                        end: 'bottom center'
+                    }
+                });
+        });
+    }
+
 })
 
 

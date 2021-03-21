@@ -341,6 +341,21 @@ body main .main__wrapper .container .line {
   body main .main__wrapper .container .selecttab .content .content__row .box:hover {
     background-color: unset;
   }
+  body main .main__wrapper .container .selecttab .content .content__row .box:hover .logo .img img {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  body main .main__wrapper .container .selecttab .content .content__row .box:hover .text .title p {
+    color: unset;
+  }
+  body main .main__wrapper .container .selecttab .content .content__row .box:hover .text .text__line {
+    background-color: unset;
+  }
+  body main .main__wrapper .container .selecttab .content .content__row .box:hover .text .textbox {
+    color: unset;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+  }
   body main .main__wrapper .container .selecttab .content .content__row .box .logo .img img {
     width: 100%;
   }
