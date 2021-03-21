@@ -2812,7 +2812,7 @@ footer .footer__wrapper .container .footer__content .right {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
-  font-family: 'Proxima Nova';
+  font-family: "Proxima Nova";
   scroll-behavior: smooth;
 }
 
@@ -2862,7 +2862,7 @@ body main .main__wrapper .container .welcome {
 }
 
 body main .main__wrapper .container .welcome h2 {
-  font-family: 'pronolight';
+  font-family: "pronolight";
   font-size: 14px;
   line-height: 22px;
   letter-spacing: 0.2em;
@@ -2876,7 +2876,7 @@ body main .main__wrapper .container .welcome p {
 body main .main__wrapper .container .welcome p.yellow {
   margin-top: 30px;
   background-color: #ffde00;
-  font-family: 'pronobold';
+  font-family: "pronobold";
   font-size: 20px;
   line-height: 30px;
   letter-spacing: 0.3em;
@@ -2889,7 +2889,7 @@ body main .main__wrapper .container .welcome p.info {
   margin-top: 30px;
   font-size: 12px;
   line-height: 22px;
-  font-family: 'Arial';
+  font-family: "Arial";
   text-align: center;
   width: 765px;
 }
@@ -2923,7 +2923,7 @@ body main .main__wrapper .container .selecttab .selector {
 body main .main__wrapper .container .selecttab .selector a {
   text-decoration: none;
   margin: 10px;
-  font-family: 'mypro';
+  font-family: "mypro";
   font-size: 16px;
   line-height: 30px;
   color: #898989;
@@ -2977,7 +2977,7 @@ body main .main__wrapper .container .allwork {
 }
 
 body main .main__wrapper .container .allwork p {
-  font-family: 'mypro';
+  font-family: "mypro";
   line-height: 30px;
   font-size: 16px;
 }
@@ -3012,14 +3012,12 @@ body main .main__wrapper .container .line {
 .box {
   width: 100%;
   cursor: pointer;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
   -webkit-transition: 0.6s;
   transition: 0.6s;
 }
 
 .box:hover {
-  background: rgba(0, 0, 0, 0.9);
+  background: #525355;
 }
 
 .box:hover .logo .img img {
@@ -3091,7 +3089,7 @@ body main .main__wrapper .container .line {
 
 .box .text .title p {
   width: 100%;
-  font-family: 'pronobold';
+  font-family: "pronobold";
   font-size: 12px;
   line-height: 30px;
   text-align: center;
@@ -3112,7 +3110,7 @@ body main .main__wrapper .container .line {
 }
 
 .box .text .textbox {
-  font-family: 'pronosemibold';
+  font-family: "pronosemibold";
   font-size: 12px;
   line-height: 20px;
   -webkit-transition: 0.6s;
