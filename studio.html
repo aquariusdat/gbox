@@ -19,22 +19,22 @@
                 </div>
             </div>
             <div class="menubar__wrapper">
-                <div class="menubar__item">
+                <div class="menubar__item" id="about">
                     <a href="#">ABOUT</a>
                 </div>
-                <div class="menubar__item">
-                    <a href="./studio.html">STUDIO</a>
+                <div class="menubar__item" id="studio">
+                    <a href="#">STUDIO</a>
                 </div>
-                <div class="menubar__item">
+                <div class="menubar__item" id="rental">
                     <a href="#">RENTAL</a>
                 </div>
-                <div class="menubar__item">
+                <div class="menubar__item" id="cafe">
                     <a href="#">CAFE</a>
                 </div>
-                <div class="menubar__item">
+                <div class="menubar__item" id="work">
                     <a href="#">WORK</a>
                 </div>
-                <div class="menubar__item">
+                <div class="menubar__item" id="contact">
                     <a href="#">CONTACT</a>
                 </div>
             </div>
@@ -334,43 +334,49 @@
     <script src="js/main.js"></script>
     <script>
 
-        var menubarrespon = document.querySelector('.header__wrapper .container .menubar');
-        var menures = document.querySelector('body .wrapper .menures');
-        var btnclosemenures = document.querySelector('body .wrapper .menures .btn__close');
+        $(document).ready(() => {
 
-        menubarrespon.addEventListener('click', function () {
-            if (document.querySelector('body .wrapper .menures .btn__close .img').classList.contains('click')) {
-                document.querySelector('body .wrapper .menures .btn__close .img').classList.remove('click');
-            }
-            if (menures.classList.contains('open')) {
-                menures.classList.remove('open')
-                menures.classList.add('close')
-            }
-            else if (menures.classList.contains('close')) {
-                menures.classList.remove('close')
-                menures.classList.add('open')
-            }
-        });
-        btnclosemenures.addEventListener('click', function () {
-            if (document.querySelector('body .wrapper .menures .btn__close .img').classList.contains('click')) {
-                document.querySelector('body .wrapper .menures .btn__close .img').classList.remove('click');
-            }
-            document.querySelector('body .wrapper .menures .btn__close .img').classList.add('click');
-            if (menures.classList.contains('open')) {
-                menures.classList.remove('open')
-                menures.classList.add('close')
-            }
-            else if (menures.classList.contains('close')) {
-                menures.classList.remove('close')
-                menures.classList.add('open')
-            }
-        });
-        var imageArrowBox = document.querySelector('.box_studio .content__box .des__content .details__des .img img');
 
-        var homepage = document.querySelector('#top .header__wrapper .container .logo');
-        homepage.addEventListener('click', () => {
-            document.location.replace("./index.html");
+            var menubarrespon = document.querySelector('.header__wrapper .container .menubar');
+            var menures = document.querySelector('body .wrapper .menures');
+            var btnclosemenures = document.querySelector('body .wrapper .menures .btn__close');
+
+            menubarrespon.addEventListener('click', function () {
+                if (document.querySelector('body .wrapper .menures .btn__close .img').classList.contains('click')) {
+                    document.querySelector('body .wrapper .menures .btn__close .img').classList.remove('click');
+                }
+                if (menures.classList.contains('open')) {
+                    menures.classList.remove('open')
+                    menures.classList.add('close')
+                }
+                else if (menures.classList.contains('close')) {
+                    menures.classList.remove('close')
+                    menures.classList.add('open')
+                }
+            });
+            btnclosemenures.addEventListener('click', function () {
+                if (document.querySelector('body .wrapper .menures .btn__close .img').classList.contains('click')) {
+                    document.querySelector('body .wrapper .menures .btn__close .img').classList.remove('click');
+                }
+                document.querySelector('body .wrapper .menures .btn__close .img').classList.add('click');
+                if (menures.classList.contains('open')) {
+                    menures.classList.remove('open')
+                    menures.classList.add('close')
+                }
+                else if (menures.classList.contains('close')) {
+                    menures.classList.remove('close')
+                    menures.classList.add('open')
+                }
+            });
+            var imageArrowBox = document.querySelector('.box_studio .content__box .des__content .details__des .img img');
+
+            var homepage = document.querySelector('#top .header__wrapper .container .logo');
+            homepage.addEventListener('click', () => {
+                document.location.replace("./index.html");
+            });
         });
+
+
     </script>
 </body>
 

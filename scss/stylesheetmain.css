@@ -3177,7 +3177,7 @@ main .maindetail__wrapper .container .title__detail {
 }
 
 main .maindetail__wrapper .container .title__detail .detail__name {
-  font-family: 'pronolight';
+  font-family: "pronolight";
   font-size: 14px;
   cursor: pointer;
   line-height: 22px;
@@ -3199,7 +3199,7 @@ main .maindetail__wrapper .container .title__detail .detail__selection .img img 
 }
 
 main .maindetail__wrapper .container .title__detail .detail__selection .selection__items {
-  font-family: 'pronoreg2';
+  font-family: "pronoreg2";
   font-size: 14px;
   line-height: 22px;
 }
@@ -3316,14 +3316,14 @@ main .maindetail__wrapper .container .project__info {
 
 main .maindetail__wrapper .container .project__info .title {
   text-transform: uppercase;
-  font-family: 'pronoreg2';
+  font-family: "pronoreg2";
   font-size: 16px;
   margin-bottom: 20px;
   letter-spacing: 0.2em;
 }
 
 main .maindetail__wrapper .container .project__info p {
-  font-family: 'Arial';
+  font-family: "Arial";
   font-size: 13px;
   line-height: 26px;
 }
@@ -3528,6 +3528,15 @@ main .maindetail__wrapper .container .line {
             flex-direction: column;
     margin: 0 10px;
     padding-bottom: 20px;
+  }
+  main .maindetail__wrapper .container .project__info .description {
+    padding: 20px 0;
+  }
+  main .maindetail__wrapper .container .project__info .client {
+    padding: 20px 0;
+  }
+  main .maindetail__wrapper .container .project__info .aboutteam {
+    padding: 20px 0;
   }
 }
 

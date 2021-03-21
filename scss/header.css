@@ -107,8 +107,8 @@ body .wrapper .menures .menubar__wrapper .menubar__item:hover::after {
 body .wrapper .menures .menubar__wrapper .menubar__item a {
   width: 100%;
   color: black;
-  font-family: 'pronosemibold';
-  font-size: 12px;
+  font-family: "pronosemibold";
+  font-size: 15px;
   line-height: 30px;
   text-decoration: none;
   padding: 15px;

@@ -18,22 +18,22 @@
                 </div>
             </div>
             <div class="menubar__wrapper">
-                <div class="menubar__item">
+                <div class="menubar__item" id="about">
                     <a href="#">ABOUT</a>
                 </div>
-                <div class="menubar__item">
-                    <a href="./studio.html">STUDIO</a>
+                <div class="menubar__item" id="studio">
+                    <a href="#">STUDIO</a>
                 </div>
-                <div class="menubar__item">
+                <div class="menubar__item" id="rental">
                     <a href="#">RENTAL</a>
                 </div>
-                <div class="menubar__item">
+                <div class="menubar__item" id="cafe">
                     <a href="#">CAFE</a>
                 </div>
-                <div class="menubar__item">
+                <div class="menubar__item" id="work">
                     <a href="#">WORK</a>
                 </div>
-                <div class="menubar__item">
+                <div class="menubar__item" id="contact">
                     <a href="#">CONTACT</a>
                 </div>
             </div>
@@ -358,44 +358,49 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
     <script src="js/main.js"></script>
     <script>
-        var box = document.querySelectorAll('.main__wrapper .container .selecttab .content .content__row .box');
-        box.forEach((item) => {
-            item.addEventListener('click', () => {
-                document.location.replace('./detail.html');
+        $(document).ready(function () {
+
+            var box = document.querySelectorAll('.main__wrapper .container .selecttab .content .content__row .box');
+            box.forEach((item) => {
+                item.addEventListener('click', () => {
+                    document.location.replace('./detail.html');
+                });
             });
+
+            var menubarrespon = document.querySelector('.header__wrapper .container .menubar');
+            var menures = document.querySelector('body .wrapper .menures');
+            var btnclosemenures = document.querySelector('body .wrapper .menures .btn__close');
+
+            menubarrespon.addEventListener('click', function () {
+                if (document.querySelector('body .wrapper .menures .btn__close .img').classList.contains('click')) {
+                    document.querySelector('body .wrapper .menures .btn__close .img').classList.remove('click');
+                }
+                if (menures.classList.contains('open')) {
+                    menures.classList.remove('open')
+                    menures.classList.add('close')
+                }
+                else if (menures.classList.contains('close')) {
+                    menures.classList.remove('close')
+                    menures.classList.add('open')
+                }
+            });
+            btnclosemenures.addEventListener('click', function () {
+                if (document.querySelector('body .wrapper .menures .btn__close .img').classList.contains('click')) {
+                    document.querySelector('body .wrapper .menures .btn__close .img').classList.remove('click');
+                }
+                document.querySelector('body .wrapper .menures .btn__close .img').classList.add('click');
+                if (menures.classList.contains('open')) {
+                    menures.classList.remove('open')
+                    menures.classList.add('close')
+                }
+                else if (menures.classList.contains('close')) {
+                    menures.classList.remove('close')
+                    menures.classList.add('open')
+                }
+            });
+
         });
 
-        var menubarrespon = document.querySelector('.header__wrapper .container .menubar');
-        var menures = document.querySelector('body .wrapper .menures');
-        var btnclosemenures = document.querySelector('body .wrapper .menures .btn__close');
-
-        menubarrespon.addEventListener('click', function () {
-            if (document.querySelector('body .wrapper .menures .btn__close .img').classList.contains('click')) {
-                document.querySelector('body .wrapper .menures .btn__close .img').classList.remove('click');
-            }
-            if (menures.classList.contains('open')) {
-                menures.classList.remove('open')
-                menures.classList.add('close')
-            }
-            else if (menures.classList.contains('close')) {
-                menures.classList.remove('close')
-                menures.classList.add('open')
-            }
-        });
-        btnclosemenures.addEventListener('click', function () {
-            if (document.querySelector('body .wrapper .menures .btn__close .img').classList.contains('click')) {
-                document.querySelector('body .wrapper .menures .btn__close .img').classList.remove('click');
-            }
-            document.querySelector('body .wrapper .menures .btn__close .img').classList.add('click');
-            if (menures.classList.contains('open')) {
-                menures.classList.remove('open')
-                menures.classList.add('close')
-            }
-            else if (menures.classList.contains('close')) {
-                menures.classList.remove('close')
-                menures.classList.add('open')
-            }
-        });
     </script>
 
 
