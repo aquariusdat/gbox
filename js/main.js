@@ -39,7 +39,7 @@ $(document).ready(function () {
                     scale: 0.3, opacity: 0, duration: 0.4,
                     scrollTrigger: {
                         trigger: section,
-                        markers: true,
+
                         start: 'center bottom',
                         end: 'bottom center'
                     }
