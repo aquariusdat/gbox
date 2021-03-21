@@ -1,9 +1,9 @@
 $(document).ready(function () {
     TweenMax.staggerFrom(
         $('.welcome .text__welcome'),
-        0.8,
-        { x: 200, opacity: 0 },
-        0.4
+        1.5,
+        { x: 200, opacity: 0, ease: "elastic.out(1,0.3)" },
+        0.5
     );
 })
 
