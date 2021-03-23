@@ -4,7 +4,7 @@ $(document).ready(function () {
             scrollTrigger: {
                 trigger: '.footer__content',
                 start: 'center bottom',
-                end: 'bottom center',
+                end: 'bottom center'
             }
         }
     )
@@ -19,9 +19,7 @@ $(document).ready(function () {
         }, 700)
     });
 
-});
 
-$(document).ready(function () {
     TweenMax.staggerFrom(
         $('.welcome .text__welcome'),
         1.5,
@@ -36,18 +34,18 @@ $(document).ready(function () {
             gsap.from(section,
 
                 {
-                    scale: 0.3, opacity: 0, duration: 0.4,
+                    scale: 0.3, opacity: 0, duration: 0.2,
                     scrollTrigger: {
                         trigger: section,
-
-                        start: 'center bottom',
+                        start: '20% bottom',
                         end: 'bottom center'
                     }
                 });
         });
     }
 
-})
+});
+
 
 
 
