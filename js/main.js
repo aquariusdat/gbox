@@ -1,10 +1,99 @@
+$(window).on("load", () => {
+    setTimeout(() => {
+        $('.loading').fadeOut("slow");
+    }, 1000)
+    setTimeout(() => {
+        TweenMax.staggerFrom(
+            $('.welcome .text__welcome'),
+            1.5,
+            { x: 200, opacity: 0, ease: "elastic.out(1,0.3)" },
+            0.5
+        );
+    }, 1001)
+
+});
+
 $(document).ready(function () {
+
+    // var arrLoadingText = gsap.utils.toArray('.loading .loading__wrapper .text__loading p');
+
+    // arrLoadingText.forEach(item => {
+    //     var tlLoading = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: '.loading .loading__wrapper .text__loading',
+    //             repeat: -1,
+    //             yoyo: true
+
+    //         }
+    //     })
+    //     var tl = new TimelineMax({ repeat: 1, yoyo: true });
+    //     tl.to('.loading .loading__wrapper .text__loading .l',
+    //         {
+    //             y: '-20px', duration: 0.4
+    //         });
+    //     tl.to('.loading .loading__wrapper .text__loading .o',
+    //         {
+    //             y: '-20px', duration: 0.4
+    //         });
+    //     tl.to('.loading .loading__wrapper .text__loading .a',
+    //         {
+    //             y: '-20px', duration: 0.4
+    //         });
+    //     tl.to('.loading .loading__wrapper .text__loading .d',
+    //         {
+    //             y: '-20px', duration: 0.4
+    //         });
+    //     tl.to('.loading .loading__wrapper .text__loading .i',
+    //         {
+    //             y: '-20px', duration: 0.4
+    //         });
+    //     tl.to('.loading .loading__wrapper .text__loading .n',
+    //         {
+    //             y: '-20px', duration: 0.4
+    //         });
+    //     tl.to('.loading .loading__wrapper .text__loading .g',
+    //         {
+    //             y: '-20px', duration: 0.4
+    //         });
+    //     tl.to('.loading .loading__wrapper .text__loading .dot1',
+    //         {
+    //             y: '-20px', duration: 0.4
+    //         });
+    //     tl.to('.loading .loading__wrapper .text__loading .dot2',
+    //         {
+    //             y: '-20px', duration: 0.4
+    //         });
+    //     tl.to('.loading .loading__wrapper .text__loading .dot3',
+    //         {
+    //             y: '-20px', duration: 0.4
+    //         })
+
+    // });
+
+    // var cursor = document.querySelector('.cursor');
+
+    // document.addEventListener('mousemove', e => {
+    //     cursor.setAttribute("style", "top: " + (e.pageY - scrollY) + "px; left: " + (e.pageX) + "px")
+    // });
+
+    // $('*').hover(function () {
+    //     $(this).data('hover', 1); //store in that element that the mouse is over it
+    // },
+    //     function () {
+    //         $(this).data('hover', 0); //store in that element that the mouse is no longer over it
+    //     });
+
+
+    // window.isHovering = function (selector) {
+    //     return $(selector).data('hover') ? true : false; //check element for hover property
+    // }
+
     let tl = gsap.timeline(
         {
             scrollTrigger: {
                 trigger: '.footer__content',
                 start: 'center bottom',
-                end: 'bottom center'
+                end: 'bottom center',
             }
         }
     )
@@ -19,13 +108,10 @@ $(document).ready(function () {
         }, 700)
     });
 
+});
 
-    TweenMax.staggerFrom(
-        $('.welcome .text__welcome'),
-        1.5,
-        { x: 200, opacity: 0, ease: "elastic.out(1,0.3)" },
-        0.5
-    );
+$(document).ready(function () {
+
 
     if (screen.width >= 320 && screen.width <= 768) {
         var sections = gsap.utils.toArray('.content .content__row .box');
@@ -34,18 +120,18 @@ $(document).ready(function () {
             gsap.from(section,
 
                 {
-                    scale: 0.3, opacity: 0, duration: 0.2,
+                    scale: 0.3, opacity: 0, duration: 0.4,
                     scrollTrigger: {
                         trigger: section,
-                        start: '20% bottom',
+
+                        start: 'center bottom',
                         end: 'bottom center'
                     }
                 });
         });
     }
 
-});
-
+})
 
 
 
