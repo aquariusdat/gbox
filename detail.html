@@ -263,19 +263,38 @@
     <script>
 
         $(document).ready(function () {
-            var tl = gsap.timeline(
-                {
-                    scrollTrigger: {
-                        trigger: '.project__info',
-                        start: 'center bottom',
-                        end: 'bottom center'
+            if (screen.width >= 320 && screen.width <= 768) {
+                var tl = gsap.timeline(
+                    {
+                        scrollTrigger: {
+                            trigger: '.project__info',
+                            start: 'center bottom',
+                            end: 'bottom center'
+                        }
                     }
-                }
-            )
+                )
 
-            tl.from('.description', { x: -100, opacity: 0, duration: 1 })
-                .from('.client', { y: 100, opacity: 0, duration: 1 }, '-=1')
-                .from('.aboutteam', { x: 100, opacity: 0, duration: 1 }, '-=1')
+                tl.from('.description', { x: -100, opacity: 0, duration: 1 })
+                    .from('.client', { x: -100, opacity: 0, duration: 1 }, '-=1')
+                    .from('.aboutteam', { x: -100, opacity: 0, duration: 1 }, '-=1')
+
+            }
+            else {
+                var tl = gsap.timeline(
+                    {
+                        scrollTrigger: {
+                            trigger: '.project__info',
+                            start: 'center bottom',
+                            end: 'bottom center'
+                        }
+                    }
+                )
+
+                tl.from('.description', { x: -100, opacity: 0, duration: 1 })
+                    .from('.client', { y: 100, opacity: 0, duration: 1 }, '-=1')
+                    .from('.aboutteam', { x: 100, opacity: 0, duration: 1 }, '-=1')
+
+            }
 
 
 
