@@ -1,0 +1,357 @@
+body {
+    width: 100%;
+    .maindetailstudio {
+        width: 100%;
+        margin: 0;
+        .maindetailstudio__wrapper {
+            width: 100%;
+            .container {
+                width: 100%;
+                .backtoall__wrapper {
+                    display: flex;
+                    justify-content: flex-end;
+                    padding: 25px 0;
+                    width: 100%;
+                    .backtoall {
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+                        p {
+                            font-family: "pronoreg2";
+                            font-size: 15px;
+                        }
+                        &:hover {
+                            .img {
+                                .img1 {
+                                    transform: translate(-200%, -50%) scale(0);
+                                }
+                                .img2 {
+                                    transform: translate(-50%, -50%) scale(1);
+                                }
+                            }
+                        }
+                        .img {
+                            display: flex;
+                            width: 40px;
+                            height: 20px;
+                            position: relative;
+                            overflow: hidden;
+                            transform: translateX(35%);
+                            .img1 {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                width: 20px;
+                                height: 20px;
+                                transform: translate(-50%, -50%) scale(1);
+                                transition: 0.5s cubic-bezier(0.95, 0.22, 0.03, 0.79);
+                            }
+                            .img2 {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                width: 20px;
+                                height: 20px;
+                                transform: translate(100%, -50%) scale(0);
+                                transition: 0.5s cubic-bezier(0.95, 0.22, 0.03, 0.79);
+                            }
+                        }
+                    }
+                }
+
+                .image__detailstudio {
+                    width: 100%;
+                    height: 477px;
+                    .slider {
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        .slider__wrapper {
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                            overflow: hidden;
+                            .slider__item {
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
+
+                .info__detailstudio {
+                    width: 100%;
+
+                    .info__wrapper {
+                        display: flex;
+                        height: 120px;
+                        .index {
+                            width: 160px;
+                            height: 100%;
+                            padding: 0 20px;
+                            .index__wrapper {
+                                display: flex;
+                                height: 100%;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                background-color: #ffde00;
+                                p {
+                                    font-family: "mypro";
+                                    line-height: 20px;
+                                    font-size: 14px;
+                                }
+                                h2 {
+                                    font-family: "dinbold";
+                                    font-size: 61px;
+                                    line-height: 62px;
+                                    letter-spacing: 0.04em;
+                                }
+                            }
+                        }
+                        .info__dimens {
+                            width: 220px;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            padding-top: 20px;
+                            align-items: center;
+                            p {
+                                font-family: "pronoreg2";
+                                font-size: 15px;
+                                line-height: 30px;
+                                letter-spacing: 0.02em;
+                            }
+                        }
+                        .info__download {
+                            width: 220px;
+                            height: 100%;
+                            display: flex;
+                            cursor: pointer;
+                            padding-top: 20px;
+                            justify-content: center;
+                            p {
+                                font-family: "pronoreg2";
+                                font-size: 15px;
+                                line-height: 30px;
+                                letter-spacing: 0.02em;
+                                position: relative;
+                                overflow: hidden;
+                                &::after {
+                                    position: absolute;
+                                    display: block;
+                                    content: "";
+                                    width: 100%;
+                                    height: 1px;
+                                    left: 0;
+
+                                    background-color: black;
+                                    transform: translateX(-100%);
+                                    transition: 0.5s cubic-bezier(0.5, 0.39, 0, 0.98);
+                                }
+                            }
+                            &:hover {
+                                p {
+                                    &::after {
+                                        transform: translateX(0%);
+                                    }
+                                }
+                                .img {
+                                    img {
+                                        transform: translateX(5px);
+                                    }
+                                }
+                            }
+                            .img {
+                                margin: 0 10px;
+                                width: 25px;
+                                img {
+                                    width: 100%;
+                                    transition: 0.5s cubic-bezier(0.5, 0.39, 0, 0.98);
+                                }
+                            }
+                        }
+                        .info__fullscreen {
+                            width: 160px;
+                            height: 100%;
+                            display: flex;
+                            cursor: pointer;
+                            padding-top: 20px;
+                            justify-content: center;
+
+                            p {
+                                font-family: "pronoreg2";
+                                font-size: 15px;
+                                line-height: 30px;
+                                letter-spacing: 0.02em;
+                                position: relative;
+                                overflow: hidden;
+                                &::after {
+                                    position: absolute;
+                                    display: block;
+                                    content: "";
+                                    width: 100%;
+                                    height: 1px;
+                                    left: 0;
+
+                                    background-color: black;
+                                    transform: translateX(-100%);
+                                    transition: 0.5s cubic-bezier(0.5, 0.39, 0, 0.98);
+                                }
+                            }
+                            &:hover {
+                                p {
+                                    &::after {
+                                        transform: translateX(0%);
+                                    }
+                                }
+                                .img {
+                                    img {
+                                        transform: translateX(5px);
+                                    }
+                                }
+                            }
+                            .img {
+                                margin: 0 10px;
+                                width: 25px;
+                                img {
+                                    width: 100%;
+                                    transition: 0.5s cubic-bezier(0.5, 0.39, 0, 0.98);
+                                }
+                            }
+                        }
+                        .info__control {
+                            height: 40px;
+                            flex: 1;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding-top: 30px;
+                            .prev {
+                                display: flex;
+                                align-items: center;
+                                cursor: pointer;
+                                p {
+                                    font-family: "pronoreg2";
+                                    font-size: 15px;
+                                    line-height: 30px;
+                                    letter-spacing: 0.02em;
+                                    position: relative;
+                                    overflow: hidden;
+                                    &::after {
+                                        position: absolute;
+                                        display: block;
+                                        content: "";
+                                        width: 100%;
+                                        height: 1px;
+                                        left: 0;
+                                        top: 25px;
+                                        background-color: black;
+                                        transform: translateX(100%);
+                                        transition: 0.5s cubic-bezier(0.5, 0.39, 0, 0.98);
+                                    }
+                                }
+                                &:hover {
+                                    .img {
+                                        img {
+                                            transform: translateX(-5px);
+                                        }
+                                    }
+                                    p {
+                                        &::after {
+                                            transform: translateX(0%);
+                                        }
+                                    }
+                                }
+                                .img {
+                                    width: 25px;
+                                    margin: 0 15px 0 0;
+                                    img {
+                                        width: 100%;
+                                        transition: 0.5s cubic-bezier(0.5, 0.39, 0, 0.98);
+                                    }
+                                }
+                            }
+                            .line {
+                                width: 2px;
+                                height: 20px;
+                                background-color: black;
+                                margin: 0 20px;
+                            }
+                            .next {
+                                display: flex;
+                                align-items: center;
+                                cursor: pointer;
+                                p {
+                                    font-family: "pronoreg2";
+                                    font-size: 15px;
+                                    line-height: 30px;
+                                    letter-spacing: 0.02em;
+                                    position: relative;
+                                    overflow: hidden;
+                                    &::after {
+                                        position: absolute;
+                                        display: block;
+                                        content: "";
+                                        width: 100%;
+                                        height: 1px;
+                                        left: 0;
+                                        top: 25px;
+                                        background-color: black;
+                                        transform: translateX(-100%);
+                                        transition: 0.5s cubic-bezier(0.5, 0.39, 0, 0.98);
+                                    }
+                                }
+                                &:hover {
+                                    .img {
+                                        img {
+                                            transform: translateX(5px);
+                                        }
+                                    }
+                                    p {
+                                        &::after {
+                                            transform: translateX(0%);
+                                        }
+                                    }
+                                }
+                                .img {
+                                    width: 25px;
+                                    margin: 0 0 0 15px;
+                                    img {
+                                        width: 100%;
+                                        transition: 0.5s cubic-bezier(0.5, 0.39, 0, 0.98);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@keyframes animPrevBtn {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-8px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes animNextBtn {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-8px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

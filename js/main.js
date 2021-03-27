@@ -98,7 +98,7 @@ $(document).ready(function () {
         }
     )
 
-    tl.from(".leftinfo", { x: -200, opacity: 0, duration: 1 }).from(".rightinfo", { x: 200, opacity: 0, duration: 1 }, "-=1")
+    tl.from(".leftinfo", { x: -100, opacity: 0, duration: 1 }).from(".rightinfo", { x: 100, opacity: 0, duration: 1 }, "-=1")
 
 
     var studioHref = document.getElementById('studio');
