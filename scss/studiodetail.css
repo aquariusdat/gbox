@@ -114,6 +114,13 @@ body .maindetailstudio .maindetailstudio__wrapper .container .image__detailstudi
      object-fit: cover;
 }
 
+body .maindetailstudio .maindetailstudio__wrapper .container .image__detailstudio .slider .slider__wrapper .slider__item img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+
 body .maindetailstudio .maindetailstudio__wrapper .container .info__detailstudio {
   width: 100%;
 }
@@ -351,8 +358,8 @@ body .maindetailstudio .maindetailstudio__wrapper .container .info__detailstudio
 }
 
 body .maindetailstudio .maindetailstudio__wrapper .container .info__detailstudio .info__wrapper .info__control .prev:hover .img img {
-  -webkit-transform: translateX(-8px);
-          transform: translateX(-8px);
+  -webkit-transform: translateX(-5px);
+          transform: translateX(-5px);
 }
 
 body .maindetailstudio .maindetailstudio__wrapper .container .info__detailstudio .info__wrapper .info__control .prev:hover p::after {
@@ -413,8 +420,8 @@ body .maindetailstudio .maindetailstudio__wrapper .container .info__detailstudio
 }
 
 body .maindetailstudio .maindetailstudio__wrapper .container .info__detailstudio .info__wrapper .info__control .next:hover .img img {
-  -webkit-transform: translateX(8px);
-          transform: translateX(8px);
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
 }
 
 body .maindetailstudio .maindetailstudio__wrapper .container .info__detailstudio .info__wrapper .info__control .next:hover p::after {
@@ -431,6 +438,143 @@ body .maindetailstudio .maindetailstudio__wrapper .container .info__detailstudio
   width: 100%;
   -webkit-transition: 0.5s cubic-bezier(0.5, 0.39, 0, 0.98);
   transition: 0.5s cubic-bezier(0.5, 0.39, 0, 0.98);
+}
+
+body .maindetailstudio .maindetailstudio__wrapper .container .line {
+  margin-top: 60px;
+  width: 100%;
+  height: 1px;
+  border: 1px solid black;
+}
+
+body .maindetailstudio .maindetailstudio__wrapper .container .floorplan__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (460px)[2];
+      grid-template-columns: repeat(2, 460px);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  row-gap: 60px;
+}
+
+body .maindetailstudio .maindetailstudio__wrapper .container .floorplan__wrapper .title {
+  font-size: 32px;
+  line-height: 30.5px;
+  font-family: "pronoreg2";
+  font-weight: bold;
+}
+
+body .maindetailstudio .maindetailstudio__wrapper .container .floorplan__wrapper .pricing {
+  width: 100%;
+  padding: 30px 20px;
+}
+
+body .maindetailstudio .maindetailstudio__wrapper .container .floorplan__wrapper .pricing .note {
+  margin: 25px 0;
+  font-size: 14px;
+  font-family: "pronoreg2";
+  line-height: 20px;
+}
+
+body .maindetailstudio .maindetailstudio__wrapper .container .floorplan__wrapper .pricing .note span {
+  font-weight: bold;
+}
+
+body .maindetailstudio .maindetailstudio__wrapper .container .floorplan__wrapper .pricing .table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .maindetailstudio .maindetailstudio__wrapper .container .floorplan__wrapper .pricing .table .table__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+body .maindetailstudio .maindetailstudio__wrapper .container .floorplan__wrapper .pricing .table .table__items:nth-child(1) {
+  border: 1px solid black;
+}
+
+body .maindetailstudio .maindetailstudio__wrapper .container .floorplan__wrapper .pricing .table .table__items .name {
+  padding: 15px 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .maindetailstudio .maindetailstudio__wrapper .container .floorplan__wrapper .pricing .table .table__items .price {
+  padding: 15px 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body .maindetailstudio .maindetailstudio__wrapper .container .floorplan__wrapper .floorplan {
+  width: 100%;
+  padding: 30px 20px;
+}
+
+body .maindetailstudio .maindetailstudio__wrapper .container .floorplan__wrapper .floorplan .img {
+  position: relative;
+  margin-top: 90px;
+  width: 270px;
+  height: 270px;
+}
+
+body .maindetailstudio .maindetailstudio__wrapper .container .floorplan__wrapper .floorplan .img img {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body .maindetailstudio .maindetailstudio__wrapper .container .floorplan__wrapper .floorplan .img .client__area {
+  position: absolute;
+  right: 10%;
+  top: 10%;
+}
+
+body .maindetailstudio .maindetailstudio__wrapper .container .floorplan__wrapper .floorplan .img .dimensions {
+  position: absolute;
+  bottom: 30%;
+  left: 15%;
+  color: #fff;
+}
+
+body .maindetailstudio .maindetailstudio__wrapper .container .floorplan__wrapper .floorplan .img .text h3 {
+  font-size: 12px;
+  line-height: 20px;
+  font-family: "pronoreg2";
+  font-weight: bold;
+}
+
+body .maindetailstudio .maindetailstudio__wrapper .container .floorplan__wrapper .floorplan .img .text p {
+  font-size: 12px;
+  line-height: 20px;
+  font-family: "pronoreg2";
 }
 
 @-webkit-keyframes animPrevBtn {

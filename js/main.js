@@ -2,14 +2,26 @@ $(window).on("load", () => {
     setTimeout(() => {
         $('.loading').fadeOut("slow");
     }, 1000)
-    setTimeout(() => {
-        TweenMax.staggerFrom(
-            $('.welcome .text__welcome'),
-            1.5,
-            { x: 200, opacity: 0, ease: "elastic.out(1,0.3)" },
-            0.5
-        );
-    }, 1001)
+    if (screen.width >= 1100) {
+        setTimeout(() => {
+            TweenMax.staggerFrom(
+                $('.welcome .text__welcome'),
+                1.5,
+                { x: 150, opacity: 0, ease: "elastic.out(1,0.3)" },
+                0.5
+            );
+        }, 1001)
+    }
+    else {
+        setTimeout(() => {
+            TweenMax.staggerFrom(
+                $('.welcome .text__welcome'),
+                1.5,
+                { x: 80, opacity: 0, ease: "elastic.out(1,0.3)" },
+                0.5
+            );
+        }, 1001)
+    }
 
 });
 
@@ -87,18 +99,47 @@ $(document).ready(function () {
     // window.isHovering = function (selector) {
     //     return $(selector).data('hover') ? true : false; //check element for hover property
     // }
-
-    let tl = gsap.timeline(
-        {
-            scrollTrigger: {
-                trigger: '.footer__content',
-                start: 'center bottom',
-                end: 'bottom center',
+    if (screen.width <= 1100 && screen.width > 768) {
+        let tl = gsap.timeline(
+            {
+                scrollTrigger: {
+                    trigger: '.footer__content',
+                    start: 'center bottom',
+                    end: 'bottom center',
+                }
             }
-        }
-    )
+        )
 
-    tl.from(".leftinfo", { x: -100, opacity: 0, duration: 1 }).from(".rightinfo", { x: 100, opacity: 0, duration: 1 }, "-=1")
+        tl.from(".leftinfo", { x: -30, opacity: 0, duration: 1 }).from(".rightinfo", { x: 30, opacity: 0, duration: 1 }, "-=1")
+    }
+    else if (screen.width <= 768) {
+        let tl = gsap.timeline(
+            {
+                scrollTrigger: {
+                    trigger: '.footer__content',
+                    start: 'center bottom',
+                    end: 'bottom center',
+                }
+            }
+        )
+
+        tl.from(".leftinfo", { x: -30, opacity: 0, duration: 1 }).from(".rightinfo", { x: 30, opacity: 0, duration: 1 }, "-=1")
+    }
+    else {
+        let tl = gsap.timeline(
+            {
+                scrollTrigger: {
+                    trigger: '.footer__content',
+                    start: 'center bottom',
+                    end: 'bottom center',
+                }
+            }
+        )
+
+        tl.from(".leftinfo", { x: -80, opacity: 0, duration: 1 }).from(".rightinfo", { x: 80, opacity: 0, duration: 1 }, "-=1")
+    }
+
+
 
 
     var studioHref = document.getElementById('studio');
