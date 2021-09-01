@@ -4262,11 +4262,12 @@ body .maindetailstudio .maindetailstudio__wrapper .container .line {
 body .maindetailstudio .maindetailstudio__wrapper .container .floorplan__wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (460px)[2];
-      grid-template-columns: repeat(2, 460px);
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
-  row-gap: 60px;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: 450px 250px;
+      grid-template-rows: 450px 250px;
+  -webkit-column-gap: 60px;
+          column-gap: 60px;
 }
 
 body .maindetailstudio .maindetailstudio__wrapper .container .floorplan__wrapper .title {
@@ -4316,13 +4317,10 @@ body .maindetailstudio .maindetailstudio__wrapper .container .floorplan__wrapper
 }
 
 body .maindetailstudio .maindetailstudio__wrapper .container .floorplan__wrapper .pricing .table .table__items .name {
-  padding: 15px 60px;
+  padding: 15px 0px 15px 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -4389,6 +4387,84 @@ body .maindetailstudio .maindetailstudio__wrapper .container .floorplan__wrapper
   font-family: "pronoreg2";
 }
 
+body .maindetailstudio .maindetailstudio__wrapper .container .floorplan__wrapper .content p {
+  font-family: "pronoreg2";
+  font-size: 14px;
+  line-height: 20px;
+}
+
+body .maindetailstudio .maindetailstudio__wrapper .container .floorplan__wrapper .specs {
+  padding: 30px 20px;
+}
+
+body .maindetailstudio .maindetailstudio__wrapper .container .floorplan__wrapper .specs .content {
+  margin: 25px 0;
+}
+
+body .maindetailstudio .maindetailstudio__wrapper .container .floorplan__wrapper .anothers {
+  padding: 30px 20px;
+}
+
+body .maindetailstudio .maindetailstudio__wrapper .container .floorplan__wrapper .anothers .content {
+  margin: 55px 0 25px 0;
+}
+
+body .maindetailstudio .maindetailstudio__wrapper .container .book-now {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .maindetailstudio .maindetailstudio__wrapper .container .book-now .btn-book {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .maindetailstudio .maindetailstudio__wrapper .container .book-now .btn-book .img {
+  padding: 10px 0;
+}
+
+body .maindetailstudio .maindetailstudio__wrapper .container .book-now .btn-book .img img {
+  width: 15px;
+  -webkit-animation: animScrolldown 1.5s infinite;
+          animation: animScrolldown 1.5s infinite;
+}
+
+body .maindetailstudio .maindetailstudio__wrapper .container .book-now .btn-book a {
+  display: block;
+  text-decoration: none;
+  padding: 25px 20px;
+  background-color: #525355;
+  border-radius: 12px;
+}
+
+body .maindetailstudio .maindetailstudio__wrapper .container .book-now .btn-book a p {
+  font-family: "pronobold";
+  font-size: 24px;
+  line-height: 31px;
+  color: #ffde00;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 @-webkit-keyframes animPrevBtn {
   0% {
     -webkit-transform: translateX(0);
@@ -4446,6 +4522,22 @@ body .maindetailstudio .maindetailstudio__wrapper .container .floorplan__wrapper
   100% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 992px) and (min-height: 500px) {
+  body .maindetailstudio .maindetailstudio__wrapper .container .info__detailstudio .info__wrapper .index {
+    padding: 0 10px;
+  }
+  body .maindetailstudio .maindetailstudio__wrapper .container .info__detailstudio .info__wrapper .info__download {
+    display: none;
+  }
+  body .maindetailstudio .maindetailstudio__wrapper .container .info__detailstudio .info__wrapper .info__dimens {
+    width: 180px;
+  }
+  body .maindetailstudio .maindetailstudio__wrapper .container .floorplan__wrapper .pricing .table .table__items .name {
+    width: 110px;
+    padding: 15px 0px 15px 30px;
   }
 }
 

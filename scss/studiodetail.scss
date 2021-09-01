@@ -343,9 +343,10 @@ body {
                 }
                 .floorplan__wrapper {
                     display: grid;
-                    grid-template-columns: repeat(2, 460px);
-                    grid-template-rows: repeat(2, 1fr);
-                    row-gap: 60px;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: 450px 250px;
+                    column-gap: 60px;
+                    // row-gap: 20px;
                     .title {
                         font-size: 32px;
                         line-height: 30.5px;
@@ -378,9 +379,9 @@ body {
                                 border-left: 1px solid black;
                                 border-bottom: 1px solid black;
                                 .name {
-                                    padding: 15px 60px;
+                                    padding: 15px 0px 15px 60px;
                                     display: flex;
-                                    justify-content: center;
+                                    // justify-content: center;
                                     align-items: center;
                                 }
                                 .price {
@@ -435,6 +436,60 @@ body {
                             }
                         }
                     }
+                    .content {
+                        p {
+                            font-family: "pronoreg2";
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                    }
+                    .specs {
+                        padding: 30px 20px;
+                        .content {
+                            margin: 25px 0;
+                        }
+                    }
+                    .anothers {
+                        padding: 30px 20px;
+                        .content {
+                            margin: 55px 0 25px 0;
+                        }
+                    }
+                }
+
+                .book-now {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .btn-book {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        .img {
+                            padding: 10px 0;
+                            img {
+                                width: 15px;
+                                animation: animScrolldown 1.5s infinite;
+                            }
+                        }
+                        a {
+                            display: block;
+                            text-decoration: none;
+                            padding: 25px 20px;
+                            background-color: #525355;
+                            border-radius: 12px;
+                            p {
+                                font-family: "pronobold";
+                                font-size: 24px;
+                                line-height: 31px;
+                                color: #ffde00;
+                                text-transform: uppercase;
+                                text-align: center;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -460,5 +515,77 @@ body {
     }
     100% {
         transform: translateX(0);
+    }
+}
+
+@include tablet {
+    body {
+        .maindetailstudio {
+            .maindetailstudio__wrapper {
+                .container {
+                    .info__detailstudio {
+                        .info__wrapper {
+                            .index {
+                                padding: 0 10px;
+                            }
+                            .info__download {
+                                display: none;
+                            }
+                            .info__dimens {
+                                width: 180px;
+                            }
+                        }
+                    }
+                    .floorplan__wrapper {
+                        .pricing {
+                            .table {
+                                .table__items {
+                                    .name {
+                                        width: 110px;
+                                        padding: 15px 0px 15px 30px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@mixin mobile {
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+        @content;
+    }
+}
+
+@include mobile {
+    body {
+        .maindetailstudio {
+            .maindetailstudio__wrapper {
+                .container {
+                    .info__detailstudio {
+                        .info__wrapper {
+                            .index {
+                            }
+                            .info__download {
+                            }
+                            .info__dimens {
+                            }
+                        }
+                    }
+                    .floorplan__wrapper {
+                        .pricing {
+                            .table {
+                                .table__items {
+                                    .name {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
